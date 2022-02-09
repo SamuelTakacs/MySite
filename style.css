@@ -11,5 +11,11 @@ body {
 nav {
   background: #FAED27;
   color: #000;
-  padding: 30px;
+  padding: 10px;
+  list-style-type: none;
+  margin: 0px;
+}
+
+li {
+  display: inline;
 }
