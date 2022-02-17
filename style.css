@@ -3,6 +3,7 @@
 
 body {
   background: linear-gradient(#614444, #595e96);
+  height: 100%;
   color: #fff;
   padding: 25px;
   font-family: 'VT323', monospace;
