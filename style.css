@@ -3,7 +3,7 @@
 
 
 body {
-  background: linear-gradient(#614444, #595e96) fixed;
+  background: linear-gradient(#6e4ba7, #c546c5) fixed;
   color: #fff;
   padding: 25px;
   /*font-family: 'VT323', monospace;*/
@@ -12,6 +12,11 @@ body {
 }
 h1 {
   font-size: 5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 6rem;
 }
 
 nav {
@@ -38,3 +43,32 @@ nav li :hover{
   background-color: #595e96;
   margin: 0 auto;
 }
+
+.recipeList li {
+  list-style-type: none;
+  display: inline-block;
+  width: 200px;
+  margin: 0 30px;
+  border: 2px solid palevioletred;
+}
+
+.recipeList figcaption {
+  background-color: gray;
+  font-size: 15px;
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+}
+
+.recipeList img:hover {
+  opacity: 60%;
+}
+
+.recipeList figure {
+  position: relative;
+}
+
+.recipeList {
+}
+
