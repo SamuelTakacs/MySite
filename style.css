@@ -17,6 +17,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 6rem;
+  text-transform: uppercase;
 }
 
 nav {
@@ -44,12 +45,9 @@ nav li :hover{
   margin: 0 auto;
 }
 
-.recipeList li {
-  list-style-type: none;
-  display: inline-block;
-  width: 200px;
-  margin: 0 30px;
-  border: 2px solid palevioletred;
+.recipeList {
+  display:flex;
+  justify-content: center;
 }
 
 .recipeList figcaption {
@@ -66,9 +64,8 @@ nav li :hover{
 }
 
 .recipeList figure {
-  position: relative;
+  position:relative;
+  border: 15px solid palevioletred;
 }
 
-.recipeList {
-}
 
