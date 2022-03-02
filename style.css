@@ -1,71 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
-
 body {
-  background: linear-gradient(#6e4ba7, #c546c5) fixed;
-  color: #fff;
-  padding: 25px;
-  /*font-family: 'VT323', monospace;*/
-  font-family: 'Open Sans', sans-serif;
+background: rgb(90,9,121);
+background: linear-gradient(22deg, rgba(90,9,121,1) 17%, rgba(0,212,255,1) 100%);
+}
+
+.wellcome {
   text-align: center;
-}
-h1 {
-  font-size: 5rem;
+  margin: auto;
 }
 
-h2 {
-  text-align: center;
-  font-size: 6rem;
-  text-transform: uppercase;
+.wellcome h1 {
+  font-size: large;
+  color: white;
 }
-
-nav {
-  background: #FAED27;
-  color: #000;
-  padding: 0px;
-  list-style-type: none;
-  margin: 0px;
-  font-size: 1.5rem;
-}
-
-nav li {
-  display: inline;
-  margin-left: 30px;
-  margin-right: 30px;
-  background:#FAED27;
-}
-
-nav li :hover{
-  background-color: aqua;
-}
-
-.footer {
-  background-color: #595e96;
-  margin: 0 auto;
-}
-
-.recipeList {
-  display:flex;
-  justify-content: center;
-}
-
-.recipeList figcaption {
-  background-color: gray;
-  font-size: 15px;
-  text-align: center;
-  width: 200px;
-  position: absolute;
-  bottom: 0;
-}
-
-.recipeList img:hover {
-  opacity: 60%;
-}
-
-.recipeList figure {
-  position:relative;
-  border: 15px solid palevioletred;
-}
-
-
