@@ -1,14 +1,32 @@
-body {
-background: rgb(90,9,121);
-background: linear-gradient(22deg, rgba(90,9,121,1) 17%, rgba(0,212,255,1) 100%);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+h1 {
+text-align: center;
+margin-bottom: 5rem;
+font-size: 5rem;
+text-transform: uppercase;
+font-family: 'Roboto Condensed', sans-serif;
+font-weight: 800;
 }
 
-.wellcome {
-  text-align: center;
-  margin: auto;
+table {
+    width: 100%;
+    height: auto;
 }
 
-.wellcome h1 {
-  font-size: large;
-  color: white;
+table, th, td {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+td {
+    word-wrap: break-word;
+}
+
+td,th {
+    width: 12vh;
+    height: 8vh;
+    text-align: center;
 }
