@@ -7,12 +7,14 @@ font-size: 3rem;
 text-transform: uppercase;
 font-family: 'Roboto Condensed', sans-serif;
 font-weight: 800;
+text-shadow: 2px 2px grey;
 }
 
 table {
     width: 100%;
     height: auto;
-    background-color: #d6c199;
+    background-color: #058FB2;
+    table-layout: fixed;
 }
 
 table, th, td {
@@ -31,17 +33,24 @@ td,th {
     width: 12vh;
     height: 8vh;
     text-align: center;
-    background-color: #e6d9c1;
+    background-color: #F9AE33;
 }
 
 td:hover {
-    background-color: #d6c199;
+    background-color: #C8D9CD;
+    transition: background-color 0.3s, font-weight 0.3s, font-size 0.3s;
+    font-weight: 900;
+    font-size: 1.5vw;
+    cursor: pointer;
 }
 
 th {
     font-weight: 900;
+    background-color: #57C7EB;
+    font-size: 1.5vw;
 }
 
 #blank {
-    background-color: #d6c199;
+    background-color: #058FB2;
+    border: none;
 }
