@@ -44,6 +44,12 @@ td:hover {
     cursor: pointer;
 }
 
+td:active {
+    background-color: #C8D9CD;
+    font-weight: 900;
+    font-size: 1.5vw;
+}
+
 th {
     font-weight: 900;
     background-color: #57C7EB;
