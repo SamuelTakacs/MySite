@@ -11,10 +11,10 @@ text-shadow: 2px 2px grey;
 }
 
 table {
-    width: 100%;
-    height: auto;
+    width: 80rem;
+    height: 20rem;
     background-color: #058FB2;
-    /*table-layout: fixed;*/
+    table-layout: fixed;
 }
 
 table, th, td {
@@ -22,7 +22,7 @@ table, th, td {
     font-weight: 100;
     border: 1px solid black;
     border-radius: 10px;
-    font-size: 1.3vw;
+    font-size: 1rem;
 }
 
 td {
@@ -30,32 +30,28 @@ td {
 }
 
 td,th {
-    width: 12vh;
-    height: 8vh;
+    width: auto;
+    height: auto;
     text-align: center;
     background-color: #F9AE33;
 }
 
-td:hover {
+td.meal:hover {
     background-color: #C8D9CD;
-    transition: background-color 0.3s, font-weight 0.3s, font-size 0.3s;
-    font-weight: 900;
-    font-size: 1.5vw;
+    transition: background-color 0.3s;
     cursor: pointer;
-    width: 12vh;
-    height: 8vh;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 td:active {
     background-color: #C8D9CD;
     font-weight: 900;
-    font-size: 1.5vw;
 }
 
 th {
     font-weight: 900;
     background-color: #57C7EB;
-    font-size: 1.5vw;
 }
 
 #blank {
@@ -63,7 +59,7 @@ th {
     border: none;
 }
 
-.meal1c {
+.meal {
     position: relative;
     cursor: pointer;
     width: 12vh;
@@ -72,9 +68,9 @@ th {
     background-color: #F9AE33;
 }
 
-.meal1c .meal1ing {
+.meal .ingredients {
     visibility: hidden;
-    width: 160px;
+    width: 20vh;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -84,10 +80,13 @@ th {
     z-index: 1;
     bottom: 125%;
     left: 50%;
-    margin-left: -80px;
+    margin-left: -90px;
+    /* If font size and weight is not declared in child element, then when hovering over parent element will change child element too*/
+    font-size: 0.7rem;
+    font-weight: 100;
   }
 
-  .meal1c .meal1ing::after {
+  .meal .ingredients::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -98,10 +97,10 @@ th {
     border-color: #555 transparent transparent transparent;
   }
 
-  .meal1c .show {
+  .meal .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
+    animation: fadeIn 1s;
   }
 
   @-webkit-keyframes fadeIn {
@@ -113,3 +112,20 @@ th {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+
+  #full-table {
+      overflow-x: auto;
+  }
+
+  .recipelink a {
+      color: yellow;
+      font-weight: 300;
+      text-decoration: none;
+  }
+
+  a.recipelink:visited {
+    color: yellow;
+    font-weight: 300;
+    text-decoration: none; 
+  }
+
