@@ -42,6 +42,8 @@ td:hover {
     font-weight: 900;
     font-size: 1.5vw;
     cursor: pointer;
+    width: 12vh;
+    height: 8vh;
 }
 
 td:active {
