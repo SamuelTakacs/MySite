@@ -14,7 +14,7 @@ table {
     width: 100%;
     height: auto;
     background-color: #058FB2;
-    table-layout: fixed;
+    /*table-layout: fixed;*/
 }
 
 table, th, td {
