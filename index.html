@@ -5,97 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Plan</title>
+    <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
-        <h1>Jedálniček</h1>
-        <div id="full-table">
-        <table>
-            <tr class="days">
-                <td id="blank"></td>
-                <th>Utorok</th>
-                <th>Streda</th>
-                <th>Štvrtok</th>
-                <th>Piatok</th>
-                <th>Sobota</th>
-                <th>Nedeľa</th>
-                <th>Pondelok</th>
-            </tr>
-            <tr class="breakfast">
-                <th class="name">Raňajky</th>
-                <td class="meal" onclick="meal1()">Smoothie s lesným ovocím
-                    <span class="ingredients" id="meal1s">Mlieko, lesné ovocie, banán a proteín</span>
-                </td>
-                <td class="meal" onclick="meal2()">Ovsené vločky
-                    <span class="ingredients" id="meal2s">Vločky, mlieko, škorica, proteín a čučoriedky</span>
-                </td>
-                <td class="meal" onclick="meal3()">Chia pudding
-                    <span class="ingredients" id="meal3s">Chia, mango, mlieko</span>
-                </td>
-                <td class="meal" onclick="meal4()">Krupica s kešu
-                    <span class="ingredients" id="meal4s">Krupica, mlieko, proteín, škorica a kešu s datlovým syrupom</span>
-                </td>
-                <td class="meal" onclick="meal5()">Hniezdo
-                    <span class="ingredients" id="meal5s">Osie hniezdo z fajných potravín</span>
-                </td>
-                <td class="meal" onclick="meal6()">Smoothie so škoricou
-                    <span class="ingredients" id="meal6s">Mlieko, proteín, banán, škorica</span>
-                </td>
-                <td class="meal" onclick="meal7()">Senvič s banánom a arašidovým maslom
-                    <span class="ingredients" id="meal7s">chlieb alebo žemľa natretá arašídovým maslom s banánom</span>
-                </td>
-            </tr>
-            <tr class="launch">
-                <th class="name">Obed</th>
-                <td class="meal" onclick="meal8()">N/A
-                    <span class="ingredients" id="meal8s">Na dnes nie je naplánované žiadne jedlo</span>
-                </td>
-                <td class="meal" onclick="meal9()">Bageta s tofu, syrom a zeleninou
-                    <span class="ingredients" id="meal9s">Bageta, tofu, plátkový syr, paradajka, horćica a kyslá uhorka</span>
-                </td>
-                <td class="meal" onclick="meal10()">Šošovicový prívarok s tofu
-                    <span class="ingredients" id="meal10s">Šošovica, tofu, voda a možno aj smotana</span>
-                </td>
-                <td class="meal" onclick="meal11()">Francúzske zemiaky
-                    <span class="ingredients" id="meal11s">Zemiaky, Brokolica, Cibuľa, seitanová domáca klobása</span>
-                </td>
-                <td class="meal" onclick="meal12()">Buddha bowl
-                    <span class="ingredients" id="meal12s">Brokolica, cvikla, kuskus, šošovica, mrkva a tofu</span>
-                </td>
-                <td class="meal" onclick="meal13()">Zapečený baklažán
-                    <span class="ingredients" id="meal13s">Baklažán, sušené paradajky, cesnak, strúhanka - <a href="https://www.lazycatkitchen.com/vegan-eggplant-parmigiana/" class="recipelink">link na recept</a>.</span>
-                </td>
-                <td class="meal" onclick="meal14()">Špagety s avokádom
-                    <span class="ingredients" id="meal14s">Špagety, avokádo, cesnak, pesto - pesto asi nemáme</span>
-                </td>
-            </tr>
-            <tr class="dinner">
-                <th class="name">Večera</th>
-                <td class="meal" onclick="meal15()">Seitanové burrito
-                    <span class="ingredients" id="meal15s">Tortilla, seitan, paradajka, vegan mayo, šošovica, cibuľa, špenát</span>
-                </td>
-                <td class="meal" onclick="meal16()">Palacinky/lievance
-                    <span class="ingredients" id="meal16s">Mlieko, múka, džem, škrob, škorica (asi nemáme)</span>
-                </td>
-                <td class="meal" onclick="meal17()">Chlieb s humusom
-                    <span class="ingredients" id="meal17s">Žemľa, hummus, tofu, syr, paradjka, paprika</span>
-                </td>
-                <td class="meal" onclick="meal18()">Tofu praženica/oko
-                    <span class="ingredients" id="meal18s">Vajce, tofu, pečivo, zelenina</span>
-                </td>
-                <td class="meal" onclick="meal19()">Pizza
-                    <span class="ingredients" id="meal19s">Múka, droždie - treba kúpiť, syr, brokolica, cuketa</span>
-                </td>
-                <td class="meal" onclick="meal20()">Banánový chlieb
-                    <span class="ingredients" id="meal20s">Banány, olej, cukor, orechy, škorica</span>
-                </td>
-                <td class="meal" onclick="meal21()">Chlieb s hummusom
-                    <span class="ingredients" id="meal21s">Žemľa, hummus, tofu, syr, paradjka, paprika</span>
-                </td>
-            </tr>
-        </table>
+    <div id="header">
+        <h1>Jedalniček</h1>
+    </div>
+    <div class="content">
+        <div class="header-day" id="pondelok" onclick="pondelok()">
+            <h1>Pondelok</h1>
         </div>
-    
+        <div class="hiding-part" id="hid-pon">
+            <div class="breakfast">
+                <h2>Raňajky</h2>
+                <p>Senvič s banánom a arašidovým maslom</p>
+            </div>
+            <div class="lunch">
+                <h2>Obed</h2>
+                <p>Špagety s avokádom</p>
+            </div>
+            <div class="dinner">
+                <h2>Večera</h2>
+                <p>Chlieb s hummusom</p>
+            </div>
+        </div>
+        <div class="header-day" id="utorok" onclick="utorok()">
+            <h1>Utorok</h1>
+        </div>
+        <div class="hiding-part" id="hid-uto">
+            <div class="breakfast">
+                <h2>Raňajky</h2>
+                <p>Smoothie s lesným ovocím</p>
+            </div>
+            <div class="lunch">
+                <h2>Obed</h2>
+                <p>N/A</p>
+            </div>
+            <div class="dinner">
+                <h2>Večera</h2>
+                <p>Seitanové burrito</p>
+            </div>
+        </div>
+        <div class="header-day" id="streda" onclick="streda()">
+            <h1>Streda</h1>
+        </div>
+        <div class="hiding-part" id="hid-str">
+            <div class="breakfast">
+                <h2>Raňajky</h2>
+                <p>Ovsené vločky</p>
+            </div>
+            <div class="lunch">
+                <h2>Obed</h2>
+                <p>Bageta s tofu, syrom a zeleninou</p>
+            </div>
+            <div class="dinner">
+                <h2>Večera</h2>
+                <p>Palacinky/lievance</p>
+            </div>
+        </div>
+        <div class="header-day" id="stvrtok" onclick="stvrtok()">
+            <h1>Štvrtok</h1>
+        </div>
+        <div class="hiding-part" id="hid-stv">
+            <div class="breakfast">
+                <h2>Raňajky</h2>
+                <p>Chia pudding</p>
+            </div>
+            <div class="lunch">
+                <h2>Obed</h2>
+                <p>Šošovicový prívarok s tofu</p>
+            </div>
+            <div class="dinner">
+                <h2>Večera</h2>
+                <p>Chlieb s humusom</p>
+            </div>
+        </div>
+        <div class="header-day" id="piatok" onclick="piatok()">
+            <h1>Piatok</h1>
+        </div>
+        <div class="hiding-part" id="hid-pia">
+            <div class="breakfast">
+                <h2>Raňajky</h2>
+                <p>Krupica s kešu</p>
+            </div>
+            <div class="lunch">
+                <h2>Obed</h2>
+                <p>Francúzske zemiaky</p>
+            </div>
+            <div class="dinner">
+                <h2>Večera</h2>
+                <p>Tofu praženica/oko</p>
+            </div>
+        </div>
+        <div class="header-day" id="sobota" onclick="sobota()">
+            <h1>Sobota</h1>
+        </div>
+        <div class="hiding-part" id="hid-sob">
+            <div class="breakfast">
+                <h2>Raňajky</h2>
+                <p>Osie hniezdo</p>
+            </div>
+            <div class="lunch">
+                <h2>Obed</h2>
+                <p>Buddha bowl</p>
+            </div>
+            <div class="dinner">
+                <h2>Večera</h2>
+                <p>Pizza</p>
+            </div>
+        </div>
+        <div class="header-day" id="nedela" onclick="nedela()">
+            <h1>Nedeľa</h1>
+        </div>
+        <div class="hiding-part" id="hid-ned">
+            <div class="breakfast">
+                <h2>Raňajky</h2>
+                <p>Smoothie so škoricou</p>
+            </div>
+            <div class="lunch">
+                <h2>Obed</h2>
+                <p>Zapečený baklažán</p>
+            </div>
+            <div class="dinner">
+                <h2>Večera</h2>
+                <p>Banánový chlieb</p>
+            </div>
+        </div>
+        <div id="garlic-box">
+            <img src="https://images.squarespace-cdn.com/content/v1/5a428ce18c56a85fe9524005/1517189167012-GDGW8KCS93GCUDQCDKYS/doodle-garlic.png" alt="garlic doodle" id="garlic">
+        </div>
+    </div>
+
 </body>
 </html>

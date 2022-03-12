@@ -1,126 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
 
-h1 {
-text-align: center;
-margin-bottom: 5rem;
-font-size: 3rem;
-text-transform: uppercase;
-font-family: 'Roboto Condensed', sans-serif;
-font-weight: 800;
-text-shadow: 2px 2px grey;
+body {
+    background-color: #ed992b;
 }
 
-table {
-    width: 100%;
-    height: auto;
-    background-color: #058FB2;
-    table-layout: fixed;
+#header {
+    background-color: #ed992b;
+    box-shadow: 1px 1px 5px black;
 }
 
-table, th, td {
-    font-family: 'Roboto Condensed', sans-serif;
+#header h1 {
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Pacifico', cursive;
+    color: black;
+    font-size: 2.5rem;
     font-weight: 100;
+    margin-top: 1rem;
+}
+
+.header-day {
     border: 1px solid black;
-    border-radius: 10px;
-    font-size: 1rem;
-    word-wrap: break-word;
+    border-radius: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 10px black;
+    background-color: #f0a23c;
 }
 
-
-td.meal:hover {
-    background-color: #C8D9CD;
-    transition: background-color 0.3s;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 500;
+.header-day:active {
+    background-color: #af7120;
+    color: white;
 }
 
-td:active {
-    background-color: #C8D9CD;
-    font-weight: 900;
+.header-day h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-th {
-    font-weight: 900;
-    background-color: #57C7EB;
-}
-
-#blank {
-    background-color: #058FB2;
-    border: none;
-}
-
-.meal {
-    position: relative;
-    cursor: pointer;
+.hiding-part {
+    margin: 3rem 0;
     text-align: center;
-    background-color: #F9AE33;
 }
 
-.meal .ingredients {
-    visibility: hidden;
-    width: 10rem;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -5rem;
-    /* If font size and weight is not declared in child element, then when hovering over parent element will change child element too*/
-    font-size: 0.7rem;
+.hiding-part h2 {
+    font-family: 'Baloo 2', cursive; 
+    font-weight: 600;
+    font-size: 1.5rem;  
+    text-shadow: 1px 1px 2px black;
+}
+
+.hiding-part p {
+    font-family: 'Baloo 2', cursive;
     font-weight: 100;
-  }
+    font-size: 1.3rem;
+}
 
-  .meal .ingredients::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
+#garlic-box {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
 
-  .meal .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-
-  #full-table {
-      overflow-x: auto;
-  }
-
-  .recipelink a {
-      color: yellow;
-      font-weight: 300;
-      text-decoration: none;
-  }
-
-  a.recipelink:visited {
-    color: yellow;
-    font-weight: 300;
-    text-decoration: none; 
-  }
-
-  th, td {
-    width: 10rem;  
-    height: 5rem;
-      
-  }
-
+#garlic {
+    width: 4rem;
+}
