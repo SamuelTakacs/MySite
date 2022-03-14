@@ -29,6 +29,10 @@ body {
     background-color: #f0a23c;
 }
 
+.header-day:hover {
+    background-color: #af7120;
+}
+
 .header-day:active {
     background-color: #af7120;
     color: white;
