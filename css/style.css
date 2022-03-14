@@ -74,3 +74,9 @@ body {
 #garlic {
     width: 4rem;
 }
+
+span.new {
+    color: red;
+    font-size: 0.65rem;
+    vertical-align: top;
+}
