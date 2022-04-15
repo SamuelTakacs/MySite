@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/pizza.css">
+    <script>
+        function pizzaAlgorithm(){
+        let oFormObject=document.forms['pizzaCalculator'];
+        let flourAmmount=oFormObject.elements["flourAmmount"].value; //cal/g 3.64
+        let pizzaCoef=flourAmmount/607;
+        let water=364*pizzaCoef; //cal 0
+        let yeast=20*pizzaCoef; //cal 1.04
+        let salt=18*pizzaCoef; //cal 0
+        let numberOfPizzas = 1;
+        if (oFormObject.elements["numberOfPizzas"].value === '1') {
+            numberOfPizzas = 1;
+        } else if (oFormObject.elements["numberOfPizzas"].value === '2') {
+            numberOfPizzas = 2;
+        } else {
+            numberOfPizzas = 3;
+        };
+        document.getElementById('app-result').style.display='block';
+        document.getElementById('flourResult').innerHTML=`You should use <span class='res'>${Math.round(flourAmmount)}g</span> of flour`;
+        document.getElementById('waterResult').innerHTML=`You should use <span class='res'>${Math.round(364*pizzaCoef)}ml</span> of water`;
+        document.getElementById('yeastResult').innerHTML=`You should use <span class='res'>${Math.round(20*pizzaCoef)}g</span> of yeast`;
+        document.getElementById('saltResult').innerHTML=`You should use <span class='res'>${Math.round(18*pizzaCoef)}g</span> of salt`;
+        document.getElementById('kcalResult').innerHTML=`One pizza will have <span class='res'>${Math.round(((flourAmmount*3.64)/numberOfPizzas)+((yeast*1.04)/numberOfPizzas))}</span> calories.`;
+        document.getElementById('weightResult').innerHTML=`One pizza will have <span class='res'>${Math.round(((flourAmmount)/numberOfPizzas)+((yeast)/numberOfPizzas))}</span> grams.`;
+}
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <h1><a href="../index.html">Jedalniček</a></h1>
+    </div>
+    <div class="content">
+        <form id="pizzaCalculator" onsubmit="pizzaAlgorithm()">
+            <fieldset>
+                <legend>Create perfect pizza !</legend>
+                <label for="flourAmmount" id="flourLabel">Ammount of flour (total)</label>
+                <input type="number" id="flourAmmount" name="flourAmmount" min="100" placeholder="Number from 100g" step="20" required>
+                <p>Number of pizzas</p>
+                <label for="one" class="radio">1</label>
+                <input type="radio" name="numberOfPizzas" id="one"  value=1 required>
+                <label for="two" class="radio">2</label>
+                <input type="radio" name="numberOfPizzas" id="two" value=2>
+                <label for="three" class="radio">3</label>
+                <input type="radio" name="numberOfPizzas" id="three" value=3>
+            </fieldset>
+            <button type="button" id="calculate" onclick="pizzaAlgorithm()">Calculate</button>
+        </form>
+
+        <div id="app-result">
+            <p id="flourResult">test1</p>
+            <p id="waterResult">test2</p>
+            <p id="yeastResult">test3</p>
+            <p id="saltResult">test4</p>
+            <p id="kcalResult">test5</p>
+            <p id="weightResult">test6</p>
+        </div>
+        <div class="image-pizza">
+            <a href="../index.html"><img src="https://media2.giphy.com/media/MaUARAPy1EfXS4P0H5/giphy.gif?cid=ecf05e47af4f30i0uq2lh8ai573xgg99g7p0bo5l70m4jpbu&rid=giphy.gif&ct=s" alt="cat" id="pizza-cat"></a>
+        </div>
+    </div>
+</body>
+</html>

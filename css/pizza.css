@@ -1,0 +1,111 @@
+a {
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Pacifico', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Pacifico', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+a:active {
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Pacifico', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+a:visited {
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Pacifico', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+form {
+    text-align: center;
+}
+
+form p, label {
+    font-family: 'Baloo 2', cursive; 
+    font-weight: 400;
+    font-size: 1rem;  
+    /*text-shadow: 1px 1px 2px black;*/
+    text-decoration: underline;
+}
+
+#flourLabel {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+#flourAmmount {
+    font-family: 'Baloo 2', cursive; 
+    font-weight: 400;
+    font-size: 1.5rem;  
+}
+
+legend {
+    font-family: 'Baloo 2', cursive; 
+    font-weight: 600;
+    font-size: 2rem;  
+}
+
+.radio {
+    font-family: 'Baloo 2', cursive; 
+    font-weight: 400;
+    font-size: 1.5rem;  
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+    font-family: 'Baloo 2', cursive; 
+    font-weight: 600;
+    font-size: 1.5rem;  
+    background-color: #4e2bed;
+    color: white;
+    border-radius: 1.5rem;
+}
+
+#app-result {
+    font-family: 'Baloo 2', cursive; 
+    font-weight: 400;
+    font-size: 1.5rem;  
+    text-decoration: none;
+    display: none;
+    line-height: 80%;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.res {
+    font-weight: 800;
+}
+
+#pizza-cat {
+    width: 10rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 5rem;
+}
