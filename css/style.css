@@ -86,3 +86,7 @@ span.new {
     text-align: center;
     font-family: 'Baloo 2', cursive; 
 }
+
+.breakfast {
+    opacity: 1;
+}

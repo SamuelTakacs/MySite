@@ -266,3 +266,35 @@ function nedela() {
         }
         document.getElementById('current-day').innerHTML = `Dnes je ${day}`;
     };
+
+    function getTime() {
+        let hourOfTheDay = new Date().getHours();
+        let a = 1
+        if (new Date().getDay() === 0) {
+            a = 6
+        } else {
+            a = 1
+        };
+
+        if (hourOfTheDay <= 9) {
+            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '1';
+            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+        } else if (hourOfTheDay > 9 && hourOfTheDay < 15) {
+            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity='0.6';
+            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '1';
+            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+        } else if (hourOfTheDay <= 15 && hourOfTheDay <= 17) {
+            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '1';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+        } else {
+            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+            }
+    }

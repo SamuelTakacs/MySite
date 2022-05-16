@@ -7,9 +7,8 @@
     <title>Meal Plan</title>
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
 </head>
-<body onload="getDay()">
+<body onload="getDay(),getTime()">
     <div id="header">
         <h1>Jedalniček</h1>
     </div>
@@ -19,7 +18,7 @@
             <h1>Pondelok</h1>
         </div>
         <div class="hiding-part" id="hid-pon">
-            <div class="breakfast">
+            <div class="breakfast" name="brekky">
                 <h2>Raňajky</h2>
                 <p>Smoothie s proteínom</p>
             </div>
@@ -167,4 +166,5 @@
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
