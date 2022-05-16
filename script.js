@@ -229,3 +229,40 @@ function nedela() {
         pon.style.display = "none";
     }; 
 };
+
+    function getDay() {
+        let day = '';
+        switch (new Date().getDay()) {
+            case 0:
+                day = 'Nedela';
+                nedela();
+                break;
+            case 1:
+                day = 'Pondelok';
+                pondelok();
+                break;
+            case 2:
+                day = 'Utorok';
+                utorok();
+                break;
+            case 3:
+                day = 'Streda';
+                streda();
+                break;
+            case 4:
+                day = 'Stvrtok';
+                stvrtok();
+                break;
+            case 5:
+                day = 'Piatok';
+                piatok();
+                break;
+            case 6:
+                day = 'Sobota';
+                sobota();
+                break;
+            default:
+                day = 'Invalid day';
+        }
+        document.getElementById('current-day').innerHTML = `Dnes je ${day}`;
+    };

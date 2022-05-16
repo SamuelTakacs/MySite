@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="getDay()">
     <div id="header">
         <h1>Jedalniček</h1>
     </div>
     <div class="content">
+        <span id="current-day"></span>
         <div class="header-day" id="pondelok" onclick="pondelok()">
             <h1>Pondelok</h1>
         </div>

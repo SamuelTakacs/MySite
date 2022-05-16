@@ -80,3 +80,9 @@ span.new {
     font-size: 0.65rem;
     vertical-align: top;
 }
+
+#current-day {
+    display: block;
+    text-align: center;
+    font-family: 'Baloo 2', cursive; 
+}
