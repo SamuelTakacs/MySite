@@ -278,23 +278,23 @@ function nedela() {
 
         if (hourOfTheDay <= 9) {
             document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '1';
-            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.6';
-            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.6';
-            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.4';
+            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.4';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.4';
         } else if (hourOfTheDay > 9 && hourOfTheDay < 15) {
-            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity='0.6';
+            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity='0.4';
             document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '1';
-            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.6';
-            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.4';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.4';
         } else if (hourOfTheDay <= 15 && hourOfTheDay <= 17) {
-            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '0.6';
-            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '0.4';
+            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.4';
             document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '1';
-            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.4';
         } else {
-            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '0.6';
-            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.6';
-            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.6';
-            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.6';
+            document.getElementsByClassName('breakfast')[new Date().getDay()-a].style.opacity = '0.4';
+            document.getElementsByClassName('lunch')[new Date().getDay()-a].style.opacity = '0.4';
+            document.getElementsByClassName('snack')[new Date().getDay()-a].style.opacity = '0.4';
+            document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.4';
             }
     }
