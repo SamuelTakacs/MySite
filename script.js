@@ -298,3 +298,5 @@ function nedela() {
             document.getElementsByClassName('dinner')[new Date().getDay()-a].style.opacity = '0.4';
             }
     }
+
+    console.log('everythingWorks');
