@@ -1,4 +1,3 @@
-
 function pondelok() {
     let uto = document.getElementById("hid-uto");
     let str = document.getElementById("hid-str");
@@ -300,3 +299,4 @@ function nedela() {
     }
 
     console.log('everythingWorks');
+

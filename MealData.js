@@ -1,5 +1,5 @@
 const mealData = [
-    meal1 = {id: 1, type: "R", name: 'Jogurt s granolou', content: [], calories: 0},
+    meal1 = {id : 1, type : "R", name : 'Jogurt s granolou', content : [], calories : 0},
     meal2 = {id: 2, type: "R", name: 'Osie hniezdo', content: [], calories: 0},
     meal3 = {id: 3, type: "R", name: 'Krupica s ovocím', content: [], calories: 0},
     meal4 = {id: 4, type: "R", name: 'Ovsená kaša', content: [], calories: 0},
@@ -31,7 +31,4 @@ const mealData = [
     meal30 = {id: 30, type: "V", name: 'Chlieb s hummusom', content: [], calories: 0},
 ]
 
-const result = mealData.filter(meal => meal.type === 'R');
-//console.log(result);
-console.log(result[1].name);
-
+export {mealData}
