@@ -1,5 +1,6 @@
+
 //Contains all meal data that will be used in meal plan
-const mealData = [ 
+/*const mealData = [ 
     meal1 = {id : 1, type : "R", name : 'Jogurt s granolou', content : [], calories : 0, allowedDays: [0,1,2,3,4,6]},
     meal2 = {id: 2, type: "R", name: 'Osie hniezdo', content: [], calories: 0, allowedDays: [5]},
     meal3 = {id: 3, type: "R", name: 'Krupica s ovocím', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -30,7 +31,7 @@ const mealData = [
     meal28 = {id: 28, type: "V", name: 'Quesadilla', content: [], calories: 0},
     meal29 = {id: 29, type: "V", name: 'Pizza', content: [], calories: 0},
     meal30 = {id: 30, type: "V", name: 'Chlieb s hummusom', content: [], calories: 0},
-]
+]*/
 
 const SimpleMealR = ['Jogurt','Chlieb'];
 
@@ -43,11 +44,11 @@ first M - monday, T - tuesday, W - wedneday, TH - thursday, F - friday, S - satu
 second B - breakfast, L - launch, S - snack, D - dinner
 e.g = mealSUD - sunday dinner
 */
-
+/*
 const mealMB = document.createElement('li'); //Create element called meal MB - monday breakfast
 mealPR.innerText = mealData[1].name; //set inner text to name of the first meal
 document.body.appendChild(mealPR); //add this element to body
-
+*/
 
 //This function will serve when you want different meal that the one you planned.
 const randomMeal = () => {
@@ -61,3 +62,18 @@ const randomMeal = () => {
     randomIndex = Math.floor(Math.random() * numberOfElements); //random number with the maximum length of length of an array
     return filteredArr[randomIndex]; //retutn randomly chosen meal that is available on today
 }
+
+const urlCat = 'https://catfact.ninja/fact';
+
+const generateCatFact = () => {
+     fetch(urlCat)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }})
+        .then(response => {
+            console.log(response);
+        })}
+
+const button = document.getElementById('button');
+button.addEventListener('click',generateCatFact());
