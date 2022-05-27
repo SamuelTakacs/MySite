@@ -71,9 +71,15 @@ const generateCatFact = () => {
             if (response.ok) {
                 return response.json();
             }})
-        .then(response => {
-            console.log(response);
-        })}
+        .them((data) => {
+            let fact = data;
+        })
+        };
+
+const updateRes = async () => {
+    response = await generateCatFact();
+
+}
 
 const button = document.getElementById('button');
 button.addEventListener('click',generateCatFact());
