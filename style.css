@@ -1,4 +1,38 @@
+/* {
+    border: 1px solid red !important;
+}
+*/
+
+#header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100vW;
+    height: 5rem;
+    top: 0;
+    background-color: rgb(113, 113, 204);
+    text-align: center;
+}
+
+#infopanel {
+    margin-top: 5rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+#cat-fact {
+    display: inline;
+}
+
+#button {
+    display: inline;
+}
+
 #content-div {
     text-align: center;
 }
 
+.day-div {
+    margin-top: 4rem;
+}
