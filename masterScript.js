@@ -35,6 +35,8 @@ const mealData = [
     {id: 30, type: "D", name: 'Chlieb s hummusom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
 ]
 
+
+/* OBSOLETE !! REPLACED BY Randomness();
 //This function will serve when you want different meal that the one you planned.
 const randomB = () => {
     let filteredArr = [];
@@ -69,51 +71,83 @@ const randomD = () => {
     let randomIndex = Math.floor(Math.random() * numberOfElements); //random number with the maximum length of length of an array
     return filteredArr[randomIndex]; //retutn randomly chosen meal that is available on today
 }
-
+*/
 
 
 const mealMB = document.createElement('p');
+const buttonMB = document.createElement('button');
 mealMB.setAttribute('id','mealMB');
+buttonMB.setAttribute('value','mealMB');
 const mealML = document.createElement('p');
+const buttonML = document.createElement('button');
 mealML.setAttribute('id','mealML');
+buttonML.setAttribute('value','mealML');
 const mealMD = document.createElement('p');
+const buttonMD = document.createElement('button');
 mealMD.setAttribute('id','mealMD');
+buttonMD.setAttribute('value','mealMD');
 const mealTB = document.createElement('p');
+const buttonTB = document.createElement('button');
 mealTB.setAttribute('id','mealTB');
+buttonTB.setAttribute('value','mealTB');
 const mealTL = document.createElement('p');
+const buttonTL = document.createElement('button');
 mealTL.setAttribute('id','mealTL');
 const mealTD = document.createElement('p');
+const buttonTD = document.createElement('button');
 mealTD.setAttribute('id','mealTD');
 const mealWB = document.createElement('p');
+const buttonWB = document.createElement('button');
 mealWB.setAttribute('id','mealWB');
+buttonWB.setAttribute('value','mealWB');
 const mealWL = document.createElement('p');
+const buttonWL = document.createElement('button');
 mealWL.setAttribute('id','mealWL');
 const mealWD = document.createElement('p');
+const buttonWD = document.createElement('button');
 mealWD.setAttribute('id','mealWD');
 const mealTHB = document.createElement('p');
+const buttonTHB = document.createElement('button');
 mealTHB.setAttribute('id','mealTHB');
+buttonTHB.setAttribute('value','mealTHB');
 const mealTHL = document.createElement('p');
+const buttonTHL = document.createElement('button');
 mealTHL.setAttribute('id','mealTHL');
 const mealTHD = document.createElement('p');
+const buttonTHD = document.createElement('button');
 mealTHD.setAttribute('id','mealTHD');
 const mealFB = document.createElement('p');
+const buttonFB = document.createElement('button');
 mealFB.setAttribute('id','mealFB');
+buttonFB.setAttribute('value','mealFB');
 const mealFL = document.createElement('p');
+const buttonFL = document.createElement('button');
 mealFL.setAttribute('id','mealFL');
 const mealFD = document.createElement('p');
+const buttonFD = document.createElement('button');
 mealFD.setAttribute('id','mealFD');
 const mealSB = document.createElement('p');
+const buttonSB = document.createElement('button');
 mealSB.setAttribute('id','mealSB');
+buttonSB.setAttribute('value','mealSB');
 const mealSL = document.createElement('p');
+const buttonSL = document.createElement('button');
 mealSL.setAttribute('id','mealSL');
 const mealSD = document.createElement('p');
+const buttonSD = document.createElement('button');
 mealSD.setAttribute('id','mealSD');
 const mealSUB = document.createElement('p');
+const buttonSUB = document.createElement('button');
 mealSUB.setAttribute('id','mealSUB');
+buttonSUB.setAttribute('value','mealSUB');
 const mealSUL = document.createElement('p');
+const buttonSUL = document.createElement('button');
 mealSUL.setAttribute('id','mealSUL');
 const mealSUD = document.createElement('p');
+const buttonSUD = document.createElement('button');
 mealSUD.setAttribute('id','mealSUD');
+
+
 
 const dayGenerator = () => {
     let tday = '';
@@ -233,6 +267,7 @@ function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R r
         document.getElementById('sunday').appendChild(mealSUD);
     }
 }
+
 
 
 generateMealPlan(b,'b');
