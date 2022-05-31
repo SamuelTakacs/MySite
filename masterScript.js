@@ -279,95 +279,117 @@ function randomnessTry(Event) {
     console.log(clickedElement.id)
         let mealtype = '';
         let elementToChange = '';
+        let today = 0;
         switch (clickedElement.id) {
             case 'mealMB':
             mealtype = 'B';
             elementToChange = 'mealMB';
+            today = 0;
             break;
             case 'mealML':
             mealtype = 'L';
             elementToChange = 'mealML';
+            today = 0;
             break;
             case 'mealMD':
             mealtype = 'D';
             elementToChange = 'mealMD';
+            today = 0;
             break;
             case 'mealTB':
             mealtype = 'B';
             elementToChange = 'mealTB';
+            today = 1;
             break;
             case 'mealTL':
             mealtype = 'L';
             elementToChange = 'mealTL';
+            today = 1;
             break;
             case 'mealTD':
             mealtype = 'D';
             elementToChange = 'mealTD';
+            today = 1;
             break;
             case 'mealWB':
             mealtype = 'B';
             elementToChange = 'mealWB';
+            today = 2;
             break;
             case 'mealWL':
             mealtype = 'L';
             elementToChange = 'mealWL';
+            today = 2;
             break;
             case 'mealWD':
             mealtype = 'D';
             elementToChange = 'mealWD';
+            today = 2;
             break;
             case 'mealTHB':
             mealtype = 'B';
             elementToChange = 'mealTHB';
+            today = 3;
             break;
             case 'mealTHL':
             mealtype = 'L';
             elementToChange = 'mealTHL';
+            today = 3;
             break;
             case 'mealTHD':
             mealtype = 'D';
             elementToChange = 'mealTHD';
+            today = 3;
             break;
             case 'mealFB':
             mealtype = 'B';
             elementToChange = 'mealFB';
+            today = 4;
             break;
             case 'mealFL':
             mealtype = 'L';
             elementToChange = 'mealFL';
+            today = 4;
             break;
             case 'mealFD':
             mealtype = 'D';
             elementToChange = 'mealFD';
+            today = 4;
             break;
             case 'mealSB':
             mealtype = 'B';
             elementToChange = 'mealSB';
+            today = 5;
             break;
             case 'mealSL':
             mealtype = 'L';
             elementToChange = 'mealSL';
+            today = 5;
             break;
             case 'mealSD':
             mealtype = 'D';
             elementToChange = 'mealSD';
+            today = 5;
             break;
             case 'mealSUB':
             mealtype = 'B';
             elementToChange = 'mealSUB';
+            today = 6;
             break;
             case 'mealSUL':
             mealtype = 'L';
             elementToChange = 'mealSUL';
+            today = 6;
             break;
             case 'mealSUD':
             mealtype = 'D';
             elementToChange = 'mealSUD';
+            today = 6;
             break;
         }
         let filteredArr = [];
         mealData.forEach((element) => { //for each element (in this case meal)
-            if (element.allowedDays?.includes(date) && element.type === mealtype) { //that elements allowed days array includes todays day
+            if (element.allowedDays?.includes(today) && element.type === mealtype) { //that elements allowed days array includes todays day
                 filteredArr.push(element.name); //return name of this meal to result array
             };
         });
