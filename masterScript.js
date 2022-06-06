@@ -12,8 +12,8 @@ const mealData = [
     {id: 107, type: "B", name: 'Volské oko', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 108, type: "B", name: 'Baked oats', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 109, type: "B", name: 'Banánový chlieb', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 109, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 110, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 109, type: "B", name: 'Avokádový puding', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 110, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 111, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 112, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 113, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -33,8 +33,8 @@ const mealData = [
     {id: 209, type: "L", name: 'Šošovicový prívarok', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 210, type: "L", name: 'Chilly sin carne', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 211, type: "L", name: 'Tofu so zeleninou a ryžou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 212, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 213, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 212, type: "L", name: 'Brokolicová polievka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 213, type: "L", name: 'Zeleninové styr-fry', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 214, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 215, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 216, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -55,7 +55,7 @@ const mealData = [
     {id: 308, type: "D", name: 'Quesadilla', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 309, type: "D", name: 'Pizza', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 310, type: "D", name: 'Chlieb s hummusom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 311, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 311, type: "D", name: 'Chlieb s avokádom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 312, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 313, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 314, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -201,9 +201,9 @@ second B - breakfast, L - launch, S - snack, D - dinner
 e.g = mealSUD - sunday dinner
 */
 
-const b = [101,102,105,107,106,105,108]
-const l = [203,204,201,201,201,201,201]
-const d = [301,301,301,301,301,301,301]
+const b = [101,104,106,109,103,102,107]
+const l = [201,202,208,211,212,204,206]
+const d = [311,308,304,305,306,309,302]
 
 function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R ranajky, O - obed
     //step one - determine mealType
