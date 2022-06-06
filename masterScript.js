@@ -3,36 +3,70 @@ const hour = new Date().getHours(); //get actual hour as number - e.g 8 for 8:30
 
 //Contains all meal data that will be used in meal plan
 const mealData = [ 
-    {id : 1, type : "B", name : 'Jogurt s granolou', content : [], calories : 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 2, type: "B", name: 'Osie hniezdo', content: [], calories: 0, allowedDays: [5]},
-    {id: 3, type: "B", name: 'Krupica s ovocím', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 4, type: "B", name: 'Ovsená kaša', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 5, type: "B", name: 'Chlieb s avokádom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 6, type: "B", name: 'Smoothie', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 7, type: "B", name: 'Volské oko', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 8, type: "B", name: 'Baked oats', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 9, type: "B", name: 'Banánový chlieb', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 10, type: "L", name: 'Špagety s omáčkou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 11, type: "L", name: 'Cícerové curry', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 12, type: "L", name: 'Špargľové rizotto', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 13, type: "L", name: 'Cuketové fašírky so zemiakmi', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 14, type: "L", name: 'Tekvicová polievka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 15, type: "L", name: 'Špagety s pečených paprík', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 16, type: "L", name: 'Tofu s hubami a ryžou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 17, type: "L", name: 'Buddha bowl', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 18, type: "L", name: 'Šošovicový prívarok', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 19, type: "L", name: 'Chilly sin carne', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 20, type: "L", name: 'Tofu so zeleninou a ryžou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 21, type: "D", name: 'Toast so syrom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 22, type: "D", name: 'Žemľa s nátierkou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 23, type: "D", name: 'Palacinky', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 24, type: "D", name: 'Waffle', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 25, type: "D", name: 'Avokádová pomazánka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 26, type: "D", name: 'Kebab', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 27, type: "D", name: 'Burger', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 28, type: "D", name: 'Quesadilla', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 29, type: "D", name: 'Pizza', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 30, type: "D", name: 'Chlieb s hummusom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id : 101, type : "B", name : 'Jogurt s granolou', content : [], calories : 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 102, type: "B", name: 'Osie hniezdo', content: [], calories: 0, allowedDays: [5]},
+    {id: 103, type: "B", name: 'Krupica s ovocím', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 105, type: "B", name: 'Chlieb s avokádom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 106, type: "B", name: 'Smoothie', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 107, type: "B", name: 'Volské oko', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 108, type: "B", name: 'Baked oats', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 109, type: "B", name: 'Banánový chlieb', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 109, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 110, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 111, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 112, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 113, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 114, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 115, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 116, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 117, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 118, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 201, type: "L", name: 'Špagety s omáčkou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 202, type: "L", name: 'Cícerové curry', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 203, type: "L", name: 'Špargľové rizotto', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 204, type: "L", name: 'Cuketové fašírky so zemiakmi', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 205, type: "L", name: 'Tekvicová polievka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 206, type: "L", name: 'Špagety s pečených paprík', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 207, type: "L", name: 'Tofu s hubami a ryžou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 208, type: "L", name: 'Buddha bowl', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 209, type: "L", name: 'Šošovicový prívarok', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 210, type: "L", name: 'Chilly sin carne', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 211, type: "L", name: 'Tofu so zeleninou a ryžou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 212, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 213, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 214, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 215, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 216, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 217, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 218, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 219, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 220, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 221, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 222, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 223, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 301, type: "D", name: 'Toast so syrom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 302, type: "D", name: 'Žemľa s nátierkou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 303, type: "D", name: 'Palacinky', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 304, type: "D", name: 'Waffle', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 305, type: "D", name: 'Avokádová pomazánka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 306, type: "D", name: 'Kebab', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 307, type: "D", name: 'Burger', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 308, type: "D", name: 'Quesadilla', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 309, type: "D", name: 'Pizza', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 310, type: "D", name: 'Chlieb s hummusom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 311, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 312, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 313, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 314, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 315, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 316, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 317, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 318, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 319, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 320, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 321, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 322, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
 ]
 
 
@@ -73,79 +107,60 @@ const randomD = () => {
 }
 */
 
-
 const mealMB = document.createElement('p');
 const buttonMB = document.createElement('button');
-mealMB.setAttribute('id','mealMB');
-buttonMB.setAttribute('value','mealMB');
 const mealML = document.createElement('p');
 const buttonML = document.createElement('button');
-mealML.setAttribute('id','mealML');
-buttonML.setAttribute('value','mealML');
 const mealMD = document.createElement('p');
 const buttonMD = document.createElement('button');
-mealMD.setAttribute('id','mealMD');
-buttonMD.setAttribute('value','mealMD');
 const mealTB = document.createElement('p');
 const buttonTB = document.createElement('button');
-mealTB.setAttribute('id','mealTB');
-buttonTB.setAttribute('value','mealTB');
 const mealTL = document.createElement('p');
 const buttonTL = document.createElement('button');
-mealTL.setAttribute('id','mealTL');
 const mealTD = document.createElement('p');
 const buttonTD = document.createElement('button');
-mealTD.setAttribute('id','mealTD');
 const mealWB = document.createElement('p');
 const buttonWB = document.createElement('button');
-mealWB.setAttribute('id','mealWB');
-buttonWB.setAttribute('value','mealWB');
 const mealWL = document.createElement('p');
 const buttonWL = document.createElement('button');
-mealWL.setAttribute('id','mealWL');
 const mealWD = document.createElement('p');
 const buttonWD = document.createElement('button');
-mealWD.setAttribute('id','mealWD');
 const mealTHB = document.createElement('p');
 const buttonTHB = document.createElement('button');
-mealTHB.setAttribute('id','mealTHB');
-buttonTHB.setAttribute('value','mealTHB');
 const mealTHL = document.createElement('p');
 const buttonTHL = document.createElement('button');
-mealTHL.setAttribute('id','mealTHL');
 const mealTHD = document.createElement('p');
 const buttonTHD = document.createElement('button');
-mealTHD.setAttribute('id','mealTHD');
 const mealFB = document.createElement('p');
 const buttonFB = document.createElement('button');
-mealFB.setAttribute('id','mealFB');
-buttonFB.setAttribute('value','mealFB');
 const mealFL = document.createElement('p');
 const buttonFL = document.createElement('button');
-mealFL.setAttribute('id','mealFL');
 const mealFD = document.createElement('p');
 const buttonFD = document.createElement('button');
-mealFD.setAttribute('id','mealFD');
 const mealSB = document.createElement('p');
 const buttonSB = document.createElement('button');
-mealSB.setAttribute('id','mealSB');
-buttonSB.setAttribute('value','mealSB');
 const mealSL = document.createElement('p');
 const buttonSL = document.createElement('button');
-mealSL.setAttribute('id','mealSL');
 const mealSD = document.createElement('p');
 const buttonSD = document.createElement('button');
-mealSD.setAttribute('id','mealSD');
 const mealSUB = document.createElement('p');
 const buttonSUB = document.createElement('button');
-mealSUB.setAttribute('id','mealSUB');
-buttonSUB.setAttribute('value','mealSUB');
 const mealSUL = document.createElement('p');
 const buttonSUL = document.createElement('button');
-mealSUL.setAttribute('id','mealSUL');
 const mealSUD = document.createElement('p');
 const buttonSUD = document.createElement('button');
-mealSUD.setAttribute('id','mealSUD');
+
+const elementsArr = [mealMB,mealML,mealMD,mealTB,mealTL,mealTD,mealWB,mealWL,mealWD,mealTHB,mealTHL,mealTHD,mealFB,mealFL,mealFD,mealSB,mealSL,mealSD,mealSUB,mealSUL,mealSUD];
+const idArr = ['mealMB','mealML','mealMD','mealTB','mealTL','mealTD','mealWB','mealWL','mealWD','mealTHB','mealTHL','mealTHD','mealFB','mealFL','mealFD','mealSB','mealSL','mealSD','mealSUB','mealSUL','mealSUD'];
+const buttonArr = [buttonMB,buttonML,buttonMD,buttonTB,buttonTL,buttonTD,buttonWB,buttonWL,buttonWD,buttonTHB,buttonTHL,buttonTHD,buttonFB,buttonFL,buttonFD,buttonSB,buttonSL,buttonSD,buttonSUB,buttonSUL,buttonSUD]
+
+//console.log(elementsArr[1])
+
+for (let i = 0; i < elementsArr.length; i++) {
+    elementsArr[i].setAttribute('id',idArr[i]);
+    elementsArr[i].setAttribute('class','addButton');
+    elementsArr[i].appendChild(document.createElement('button'));
+};
 
 
 
@@ -186,9 +201,9 @@ second B - breakfast, L - launch, S - snack, D - dinner
 e.g = mealSUD - sunday dinner
 */
 
-const b = [1,2,5,7,6,5,8]
-const l = [10,12,14,15,16,17,18]
-const d = [22,23,24,28,26,28,22]
+const b = [101,102,105,107,106,105,108]
+const l = [203,204,201,201,201,201,201]
+const d = [301,301,301,301,301,301,301]
 
 function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R ranajky, O - obed
     //step one - determine mealType
@@ -274,6 +289,28 @@ generateMealPlan(b,'b');
 generateMealPlan(l,'l');
 generateMealPlan(d,'d');
 
+for (let i = 0; i < elementsArr.length; i++) {
+    elementsArr[i].setAttribute('id',idArr[i]);
+    elementsArr[i].setAttribute('class','addButton');
+    elementsArr[i].appendChild(document.createElement('button'));
+};
+let allButtons = document.getElementsByTagName('button');
+
+for (let i = 1; i < allButtons.length; i++) {
+    allButtons[i].setAttribute('class','button');
+}
+
+let buttonsClass = document.getElementsByClassName('button');
+const buttArr = ['mealMB','mealML','mealMD','mealTB','mealTL','mealTD','mealWB','mealWL','mealWD','mealTHB','mealTHL','mealTHD','mealFB','mealFL','mealFD','mealSB','mealSL','mealSD','mealSUB','mealSUL','mealSUD'];
+
+for (let i = 0; i < buttonsClass.length; i++) {
+    buttonsClass[i].innerHTML = 'Change';
+    buttonsClass[i].value = buttArr[i];
+}
+
+
+
+
 /*
 const mealMB = document.createElement('li'); //Create element called meal MB - monday breakfast
 mealMB.innerText = mealData[1].name; //set inner text to name of the first meal
@@ -311,11 +348,11 @@ button.addEventListener('click',generateCatFact);  //When add () after function 
 
 function randomnessTry(Event) {
     let clickedElement = Event.target;
-    console.log(clickedElement.id)
+    console.log(clickedElement.value)
         let mealtype = '';
         let elementToChange = '';
         let today = 0;
-        switch (clickedElement.id) {
+        switch (clickedElement.value) {
             case 'mealMB':
             mealtype = 'B';
             elementToChange = 'mealMB';
@@ -424,7 +461,7 @@ function randomnessTry(Event) {
         }
         let filteredArr = [];
         mealData.forEach((element) => { //for each element (in this case meal)
-            if (element.allowedDays?.includes(today) && element.type === mealtype) { //that elements allowed days array includes todays day
+            if (element.allowedDays?.includes(today) && element.type === mealtype && element.name !== '') { //that elements allowed days array includes todays day
                 filteredArr.push(element.name); //return name of this meal to result array
             };
         });
@@ -432,7 +469,29 @@ function randomnessTry(Event) {
         let randomIndex = Math.floor(Math.random() * numberOfElements); //random number with the maximum length of length of an array
         let result = filteredArr[randomIndex]; //retutn randomly chosen meal that is available on today
         document.getElementById(elementToChange).innerHTML = result;
+        let newButton = document.createElement('button');
+        newButton.setAttribute('value',elementToChange);
+        newButton.innerHTML = 'Change';
+        newButton.setAttribute('class','button');
+        document.getElementById(elementToChange).appendChild(newButton);
     };
     
 
 document.body.addEventListener('click',randomnessTry)
+
+function showMore(Event) {
+    let clickedElement = Event.target;
+    console.log(clickedElement.id)
+    //document.getElementById('moreInfo').parentElement.removeChild;
+    let moreInfo = document.createElement('div');
+    moreInfo.setAttribute('id','moreInfo');
+    clickedElement.appendChild(moreInfo);
+    let ingredients = document.createElement('p');
+    let indexArr = mealData.findIndex(object => {
+        return object.name === clickedElement.innerText;
+    })
+    ingredients.innerHTML = mealData[indexArr].name;
+    moreInfo.appendChild(ingredients);
+}
+
+document.body.addEventListener('click',showMore)
