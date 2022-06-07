@@ -3,22 +3,38 @@
 }
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500;900&display=swap');
+
 #header {
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
     width: 100vW;
-    height: 5rem;
+    height: auto;
     top: 0;
     background-color: rgb(113, 113, 204);
     text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.3rem;
+}
+
+#logo-img {
+    height: 5rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    top: 0;
+    margin-top: 0;
 }
 
 #infopanel {
-    margin-top: 5rem;
+    margin-top: 6rem;
     padding-top: 1rem;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 #cat-fact {
@@ -27,10 +43,14 @@
 
 #button {
     display: inline;
+    width: 7rem;
+    height: 1.3rem;
 }
 
 #content-div {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5rem;
 }
 
 .day-div {
@@ -44,4 +64,10 @@
     left: 0;
     bottom: 0;
     height: 2rem;
+}
+
+#moreInfo {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 550;
 }
