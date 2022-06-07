@@ -3,7 +3,7 @@ const hour = new Date().getHours(); //get actual hour as number - e.g 8 for 8:30
 
 //Contains all meal data that will be used in meal plan
 const mealData = [ 
-    {id : 101, type : "B", name : 'Jogurt s granolou', content : [], calories : 0, allowedDays: [0,1,2,3,4,6]},
+    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky'], calories : 0, allowedDays: [0,1,2,3,4,6]},
     {id: 102, type: "B", name: 'Osie hniezdo', content: [], calories: 0, allowedDays: [5]},
     {id: 103, type: "B", name: 'Krupica s ovocím', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -224,6 +224,7 @@ function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R r
     };
     let nameArray = [];
     let fullArray = [];
+    let dayOfWeek = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
     //prepare array
     array.forEach(element => {
         for (let i = 0; i < mealData.length; i++) {
@@ -234,56 +235,30 @@ function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R r
         }
     });
     if (mealType === 'B') {
-        mealMB.innerText = nameArray[0]
-        mealTB.innerText = nameArray[1]
-        mealWB.innerText = nameArray[2]
-        mealTHB.innerText = nameArray[3]
-        mealFB.innerText = nameArray[4]
-        mealSB.innerText = nameArray[5]
-        mealSUB.innerText = nameArray[6]
-        document.getElementById('monday').appendChild(mealMB);
-        document.getElementById('tuesday').appendChild(mealTB);
-        document.getElementById('wednesday').appendChild(mealWB);
-        document.getElementById('thursday').appendChild(mealTHB);
-        document.getElementById('friday').appendChild(mealFB);
-        document.getElementById('saturday').appendChild(mealSB);
-        document.getElementById('sunday').appendChild(mealSUB);
+        let breakfast = [mealMB,mealTB,mealWB,mealTHB,mealFB,mealSB,mealSUB];
+        for (let i=0; i<breakfast.length;i++) {
+            breakfast[i].innerText = nameArray[i];
+            breakfast[i].setAttribute('data-id',fullArray[i].id);
+            document.getElementById(dayOfWeek[i]).appendChild(breakfast[i]);
+        }
     }
     if (mealType === 'L') {
-        mealML.innerText = nameArray[0]
-        mealTL.innerText = nameArray[1]
-        mealWL.innerText = nameArray[2]
-        mealTHL.innerText = nameArray[3]
-        mealFL.innerText = nameArray[4]
-        mealSL.innerText = nameArray[5]
-        mealSUL.innerText = nameArray[6]
-        document.getElementById('monday').appendChild(mealML);
-        document.getElementById('tuesday').appendChild(mealTL);
-        document.getElementById('wednesday').appendChild(mealWL);
-        document.getElementById('thursday').appendChild(mealTHL);
-        document.getElementById('friday').appendChild(mealFL);
-        document.getElementById('saturday').appendChild(mealSL);
-        document.getElementById('sunday').appendChild(mealSUL);
+        let lunch = [mealML,mealTL,mealWL,mealTHL,mealFL,mealSL,mealSUL]
+        for (let i=0; i<lunch.length;i++) {
+            lunch[i].innerText = nameArray[i];
+            lunch[i].setAttribute('data-id',fullArray[i].id);
+            document.getElementById(dayOfWeek[i]).appendChild(lunch[i]);
+        }
     }
     if (mealType === 'D') {
-        mealMD.innerText = nameArray[0]
-        mealTD.innerText = nameArray[1]
-        mealWD.innerText = nameArray[2]
-        mealTHD.innerText = nameArray[3]
-        mealFD.innerText = nameArray[4]
-        mealSD.innerText = nameArray[5]
-        mealSUD.innerText = nameArray[6]
-        document.getElementById('monday').appendChild(mealMD);
-        document.getElementById('tuesday').appendChild(mealTD);
-        document.getElementById('wednesday').appendChild(mealWD);
-        document.getElementById('thursday').appendChild(mealTHD);
-        document.getElementById('friday').appendChild(mealFD);
-        document.getElementById('saturday').appendChild(mealSD);
-        document.getElementById('sunday').appendChild(mealSUD);
+        let dinner = [mealMD,mealTD,mealWD,mealTHD,mealFD,mealSD,mealSUD]
+        for (let i=0; i<dinner.length;i++) {
+            dinner[i].innerText = nameArray[i];
+            dinner[i].setAttribute('data-id',fullArray[i].id);
+            document.getElementById(dayOfWeek[i]).appendChild(dinner[i]);
+        }
     }
 }
-
-
 
 generateMealPlan(b,'b');
 generateMealPlan(l,'l');
@@ -462,13 +437,15 @@ function randomnessTry(Event) {
         let filteredArr = [];
         mealData.forEach((element) => { //for each element (in this case meal)
             if (element.allowedDays?.includes(today) && element.type === mealtype && element.name !== '') { //that elements allowed days array includes todays day
-                filteredArr.push(element.name); //return name of this meal to result array
+                filteredArr.push(element); //return name of this meal to result array
             };
         });
         const numberOfElements = filteredArr.length; //index of a length of the results array
         let randomIndex = Math.floor(Math.random() * numberOfElements); //random number with the maximum length of length of an array
-        let result = filteredArr[randomIndex]; //retutn randomly chosen meal that is available on today
-        document.getElementById(elementToChange).innerHTML = result;
+        let resultName = filteredArr[randomIndex].name; //retutn randomly chosen meal that is available on today
+        let resultId = filteredArr[randomIndex].id;
+        document.getElementById(elementToChange).innerHTML = resultName;
+        document.getElementById(elementToChange).dataset.id = resultId;
         let newButton = document.createElement('button');
         newButton.setAttribute('value',elementToChange);
         newButton.innerHTML = 'Change';
@@ -482,16 +459,25 @@ document.body.addEventListener('click',randomnessTry)
 function showMore(Event) {
     let clickedElement = Event.target;
     console.log(clickedElement.id)
-    //document.getElementById('moreInfo').parentElement.removeChild;
+    if (document.getElementById('moreInfo')) {
+        let moreInfo = document.getElementById('moreInfo');
+        moreInfo.remove();
+    }
+    
     let moreInfo = document.createElement('div');
     moreInfo.setAttribute('id','moreInfo');
     clickedElement.appendChild(moreInfo);
-    let ingredients = document.createElement('p');
-    let indexArr = mealData.findIndex(object => {
-        return object.name === clickedElement.innerText;
-    })
-    ingredients.innerHTML = mealData[indexArr].name;
-    moreInfo.appendChild(ingredients);
+    
+    let showIngredients = document.createElement('p');
+    let gotId = parseInt(clickedElement.dataset.id,10);
+    console.log(gotId)
+    const ingredients = mealData.find(element => element.id === gotId);
+    if (ingredients.content == 0) {
+        showIngredients.innerHTML = 'Momentálne ešte nemáme všetky údaje';
+    } else {
+        showIngredients.innerHTML = ingredients.content.join(", ");
+    }
+    moreInfo.appendChild(showIngredients);
 }
 
 document.body.addEventListener('click',showMore)
