@@ -3,7 +3,7 @@ const hour = new Date().getHours(); //get actual hour as number - e.g 8 for 8:30
 
 //Contains all meal data that will be used in meal plan
 const mealData = [ 
-    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky','protein'], calories : 450, nutrients: ['P:37g','T:11g','S:62g'], link: 'https://www.google.com', allowedDays: [0,1,2,3,4,6]},
+    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky','protein'], calories : 450, nutrients: ['P:37g','T:11g','S:62g'], link: 'https://www.google.com', recipe:['Daj jogurt do misky','Daj granolu do jogurtu','Zjedz jedlo'], allowedDays: [0,1,2,3,4,6]},
     {id: 102, type: "B", name: 'Osie hniezdo', content: ['múka','maslo','cukor','skorica','kvasok'], calories: 550, nutrients:['P:9g','T:10g','S:92g'], link: 'https://nourishingamy.com/2020/11/17/quick-protein-cinnamon-rolls-for-2-vegan-gf-option/', allowedDays: [5]},
     {id: 103, type: "B", name: 'Krupica s ovocím', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -22,7 +22,7 @@ const mealData = [
     {id: 116, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 117, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 118, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 201, type: "L", name: 'Špagety s omáčkou', content: ['barilla n.o 5 100g','omacka 150g','parmezam 15g'], calories: 550, nutrients: ['P:17g','T:8g','S:99g'], allowedDays: [0,1,2,3,4,6]},
+    {id: 201, type: "L", name: 'Špagety s omáčkou', content: ['barilla n.o 5 100g','omacka 150g','parmezam 15g'], calories: 550, nutrients: ['P:17g','T:8g','S:99g'], link: "", allowedDays: [0,1,2,3,4,6]},
     {id: 202, type: "L", name: 'Cícerové curry', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 203, type: "L", name: 'Špargľové rizotto', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 204, type: "L", name: 'Cuketové fašírky so zemiakmi', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -461,7 +461,7 @@ function showMore(Event) {
         let moreInfo = document.getElementById('moreInfo');
         moreInfo.remove();
     }
-    
+    if (idArr.includes(clickedElement.id) || elementsArr.includes(clickedElement.id) || elementsArr.includes(clickedElement.dataset.recipeid) || idArr.includes(clickedElement.dataset.recipeid)) {
     let moreInfo = document.createElement('div');
     moreInfo.setAttribute('id','moreInfo');
     clickedElement.appendChild(moreInfo);
@@ -470,6 +470,7 @@ function showMore(Event) {
     let showNutrients = document.createElement('p');
     let showCalories = document.createElement('p');
     let showLink = document.createElement('a');
+    let showRecipe = document.createElement('img');
     let gotId = parseInt(clickedElement.dataset.id,10);
     const ingredients = mealData.find(element => element.id === gotId);
     if (ingredients.content == 0) {
@@ -491,6 +492,74 @@ function showMore(Event) {
         showLink.setAttribute('href',ingredients.link);
         moreInfo.appendChild(showLink);
     }
+    if (ingredients.recipe) {
+        showRecipe.setAttribute('src','https://icon-library.com/images/recipe-icon-png/recipe-icon-png-25.jpg')
+        showRecipe.setAttribute('id','link-picture');
+        showRecipe.setAttribute('data-recipeid',ingredients.id);
+        moreInfo.appendChild(showRecipe);
+    }
+}
 }
 
+
+
+// Get the modal
+let modal = document.getElementById("pop-up");
+
+// Get the button that opens the modal
+let btn = document.getElementById("mealMB");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+document.body.onclick = function(event) {
+    let clickedID = event.target.dataset.recipeid;
+    console.log(clickedID);
+    if (idArr.includes(clickedID) || elementsArr.includes(clickedID)) {
+    
+        modal.style.display = "block";
+        let item =  mealData.find(element => element.id === clickedId);
+        
+        listElement = document.createElement('ol');
+        modal.appendChild(listElement);
+        
+        item.recipe.forEach(element => {
+            let li = document.createElement('li');
+            listElement.appendChild(li);
+            li.innerHTML += element;
+        });
+    }
+}
+
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 document.body.addEventListener('click',showMore)
+/*
+let items = [
+        'Blue',
+        'Red',
+        'White',
+        'Green',
+        'Black',
+        'Orange'
+    ],
+    ul = document.createElement('ul');
+
+document.getElementById('myItemList').appendChild(ul);
+
+items.forEach(item => {
+    let li = document.createElement('li');
+    ul.appendChild(li);
+
+    li.innerHTML += item;
+});
+*/
