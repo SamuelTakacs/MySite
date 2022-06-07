@@ -40,3 +40,8 @@
 .button {
     margin-left: 0.5rem;
 }
+#link-picture {
+    left: 0;
+    bottom: 0;
+    height: 2rem;
+}

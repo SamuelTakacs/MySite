@@ -3,7 +3,7 @@ const hour = new Date().getHours(); //get actual hour as number - e.g 8 for 8:30
 
 //Contains all meal data that will be used in meal plan
 const mealData = [ 
-    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky'], calories : 0, allowedDays: [0,1,2,3,4,6]},
+    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky','protein'], calories : 450, nutrients: ['P:37g','T:11g','S:62g'], link: 'https://www.google.com', allowedDays: [0,1,2,3,4,6]},
     {id: 102, type: "B", name: 'Osie hniezdo', content: [], calories: 0, allowedDays: [5]},
     {id: 103, type: "B", name: 'Krupica s ovocím', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -52,10 +52,10 @@ const mealData = [
     {id: 305, type: "D", name: 'Avokádová pomazánka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 306, type: "D", name: 'Kebab', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 307, type: "D", name: 'Burger', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 308, type: "D", name: 'Quesadilla', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 308, type: "D", name: 'Quesadilla', content: ['tortila 60/120g','cicer 50g','zelenina 100g','omacka 30g','syr 20g','tofu/seitan 50g'], calories: 0, nutrients: ['P:29g','T:28g','S:60g'], link: '', allowedDays: [0,1,2,3,4,5,6]},
     {id: 309, type: "D", name: 'Pizza', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 310, type: "D", name: 'Chlieb s hummusom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 311, type: "D", name: 'Chlieb s avokádom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 311, type: "D", name: 'Chlieb s avokádom', content: ['kaiserka 80g','avokado 40g','parmezam 10g','tofu 40g','paprika 100g'], calories: 680, nutrients: ['P:35g','T:17g','S:88g'], link: '', allowedDays: [0,1,2,3,4,5,6]},
     {id: 312, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 313, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 314, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
@@ -323,7 +323,6 @@ button.addEventListener('click',generateCatFact);  //When add () after function 
 
 function randomnessTry(Event) {
     let clickedElement = Event.target;
-    console.log(clickedElement.value)
         let mealtype = '';
         let elementToChange = '';
         let today = 0;
@@ -458,7 +457,6 @@ document.body.addEventListener('click',randomnessTry)
 
 function showMore(Event) {
     let clickedElement = Event.target;
-    console.log(clickedElement.id)
     if (document.getElementById('moreInfo')) {
         let moreInfo = document.getElementById('moreInfo');
         moreInfo.remove();
@@ -469,8 +467,10 @@ function showMore(Event) {
     clickedElement.appendChild(moreInfo);
     
     let showIngredients = document.createElement('p');
+    let showNutrients = document.createElement('p');
+    let showCalories = document.createElement('p');
+    let showLink = document.createElement('a');
     let gotId = parseInt(clickedElement.dataset.id,10);
-    console.log(gotId)
     const ingredients = mealData.find(element => element.id === gotId);
     if (ingredients.content == 0) {
         showIngredients.innerHTML = 'Momentálne ešte nemáme všetky údaje';
@@ -478,6 +478,19 @@ function showMore(Event) {
         showIngredients.innerHTML = ingredients.content.join(", ");
     }
     moreInfo.appendChild(showIngredients);
+    if (ingredients.nutrients !== 0) {
+        showNutrients.innerHTML = ingredients.nutrients.join(', ');
+        moreInfo.appendChild(showNutrients);
+    } 
+    if (ingredients.calories > 0) {
+        showCalories.innerHTML = `${ingredients.calories} kcal`;
+        moreInfo.appendChild(showCalories);
+    }
+    if (ingredients.link !== "") {
+        showLink.innerHTML = `<img src="https://static.thenounproject.com/png/2434646-200.png" id="link-picture">`;
+        showLink.setAttribute('href',ingredients.link);
+        moreInfo.appendChild(showLink);
+    }
 }
 
 document.body.addEventListener('click',showMore)
