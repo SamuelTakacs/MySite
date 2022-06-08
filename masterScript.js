@@ -3,70 +3,70 @@ const hour = new Date().getHours(); //get actual hour as number - e.g 8 for 8:30
 
 //Contains all meal data that will be used in meal plan
 const mealData = [ 
-    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky','protein'], calories : 450, nutrients: ['P:37g','T:11g','S:62g'], link: 'https://www.google.com', recipe:['Daj jogurt do misky','Daj granolu do jogurtu','Zjedz jedlo'], allowedDays: [0,1,2,3,4,6]},
+    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky','protein'], calories : 450, nutrients: ['P:37g','T:11g','S:62g'], link:'', recipe:['Daj jogurt do misky','Daj granolu do jogurtu','Pridaj čučoriedky'], allowedDays: [0,1,2,3,4,6]},
     {id: 102, type: "B", name: 'Osie hniezdo', content: ['múka','maslo','cukor','skorica','kvasok'], calories: 550, nutrients:['P:9g','T:10g','S:92g'], link: 'https://nourishingamy.com/2020/11/17/quick-protein-cinnamon-rolls-for-2-vegan-gf-option/', allowedDays: [5]},
-    {id: 103, type: "B", name: 'Krupica s ovocím', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 105, type: "B", name: 'Chlieb s avokádom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 106, type: "B", name: 'Smoothie', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 107, type: "B", name: 'Volské oko', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 108, type: "B", name: 'Baked oats', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 109, type: "B", name: 'Banánový chlieb', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 109, type: "B", name: 'Avokádový puding', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 110, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 111, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 112, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 113, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 114, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 115, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 116, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 117, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 118, type: "B", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 103, type: "B", name: 'Krupica s ovocím', content: ['mlieko','krupica','kesu','datlovy syrup'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 105, type: "B", name: 'Chlieb s avokádom', content: [], nutrients: [], recipe:[], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 106, type: "B", name: 'Smoothie', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 107, type: "B", name: 'Volské oko', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 108, type: "B", name: 'Baked oats', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 109, type: "B", name: 'Banánový chlieb', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 109, type: "B", name: 'Avokádový puding', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 110, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 111, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 112, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 113, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 114, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 115, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 116, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 117, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 118, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 201, type: "L", name: 'Špagety s omáčkou', content: ['barilla n.o 5 100g','omacka 150g','parmezam 15g'], calories: 550, nutrients: ['P:17g','T:8g','S:99g'], link: "", allowedDays: [0,1,2,3,4,6]},
-    {id: 202, type: "L", name: 'Cícerové curry', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 203, type: "L", name: 'Špargľové rizotto', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 204, type: "L", name: 'Cuketové fašírky so zemiakmi', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 205, type: "L", name: 'Tekvicová polievka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 206, type: "L", name: 'Špagety s pečených paprík', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 207, type: "L", name: 'Tofu s hubami a ryžou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 208, type: "L", name: 'Buddha bowl', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 209, type: "L", name: 'Šošovicový prívarok', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 210, type: "L", name: 'Chilly sin carne', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 211, type: "L", name: 'Tofu so zeleninou a ryžou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 212, type: "L", name: 'Brokolicová polievka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 213, type: "L", name: 'Zeleninové styr-fry', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 214, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 215, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 216, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 217, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 218, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 219, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 220, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 221, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 222, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 223, type: "L", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 301, type: "D", name: 'Toast so syrom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 302, type: "D", name: 'Žemľa s nátierkou', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 303, type: "D", name: 'Palacinky', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 304, type: "D", name: 'Waffle', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 305, type: "D", name: 'Avokádová pomazánka', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 306, type: "D", name: 'Kebab', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 307, type: "D", name: 'Burger', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 202, type: "L", name: 'Cícerové curry', content: ['cicer','kari','kokosove-mlieko',], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 203, type: "L", name: 'Špargľové rizotto', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 204, type: "L", name: 'Cuketové fašírky so zemiakmi', content: [],link:'', nutrients: [], recipe:[], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 205, type: "L", name: 'Tekvicová polievka', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 206, type: "L", name: 'Špagety s pečených paprík', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 207, type: "L", name: 'Tofu s hubami a ryžou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 208, type: "L", name: 'Buddha bowl', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 209, type: "L", name: 'Šošovicový prívarok', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 210, type: "L", name: 'Chilly sin carne', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 211, type: "L", name: 'Tofu so zeleninou a ryžou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 212, type: "L", name: 'Brokolicová polievka', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 213, type: "L", name: 'Zeleninové styr-fry', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 214, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 215, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 216, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 217, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 218, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 219, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 220, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 221, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 222, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 223, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 301, type: "D", name: 'Toast so syrom', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 302, type: "D", name: 'Žemľa s nátierkou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 303, type: "D", name: 'Palacinky', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 304, type: "D", name: 'Waffle', content: ['protein 50g','muka 70g','mlieko 200ml','banan 100g','slahacka 20g','dzem/syrup 40g','prasok do peciva'], calories: 670,link:'https://www.onecleverchef.com/vegan-protein-waffles-healthy-gluten-free/', nutrients: ['P:57g','S:98g','T:5g'], recipe:['Banan z mliekom pomixuj na kasu','Zmiesaj s proteinom, mukou a praskom do peciva','Cesto musi byt tuhe','v nahriatom wafflovaci sa pecie 5 minut'], allowedDays: [0,1,2,3,4,6]},
+    {id: 305, type: "D", name: 'Avokádová pomazánka', content: ['avokado 50g','kaiserka 90g','paprika 100g','tofu 80g','syr 30g'],link:'', nutrients: ['P:21','S:59','T:24'], recipe:['avokado popuc vydlickou, pridaj sol a peper (moze byt aj citron)','natri chlieb, nakrajaj oblohu a serviruj'], calories: 553, allowedDays: [0,1,2,3,4,6]},
+    {id: 306, type: "D", name: 'Kebab', content: ['tortilla','seitan','sojova omacka','obloha (cibula, salat, pradajaka)','cicer','vegan mayo'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 307, type: "D", name: 'Burger', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 308, type: "D", name: 'Quesadilla', content: ['tortila 60/120g','cicer 50g','zelenina 100g','omacka 30g','syr 20g','tofu/seitan 50g'], calories: 680, nutrients: ['P:29g','T:28g','S:60g'], link: '', allowedDays: [0,1,2,3,4,5,6]},
-    {id: 309, type: "D", name: 'Pizza', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 310, type: "D", name: 'Chlieb s hummusom', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 311, type: "D", name: 'Chlieb s avokádom', content: ['kaiserka 80g','avokado 40g','parmezam 10g','tofu 40g','paprika 100g'], calories: 620, nutrients: ['P:35g','T:17g','S:88g'], link: '', allowedDays: [0,1,2,3,4,5,6]},
-    {id: 312, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 313, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 314, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 315, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 316, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 317, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 318, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 319, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 320, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 321, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
-    {id: 322, type: "D", name: '', content: [], calories: 0, allowedDays: [0,1,2,3,4,6]},
+    {id: 309, type: "D", name: 'Pizza', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 310, type: "D", name: 'Chlieb s hummusom', content: ['kaiserka 90g','hummus trio 60g','tofu 80g','paprika 100g','kysla uhorka 1ks'], calories: 620,link:'', nutrients: ['P:30g','S:60g','T:30g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 311, type: "D", name: 'Chlieb s avokádom', content: ['kaiserka 80g','avokado 40g','parmezam 10g','tofu 40g','paprika 100g'], calories: 620, nutrients: ['P:35g','T:17g','S:88g'], link: '', recipe:[], allowedDays: [0,1,2,3,4,5,6]},
+    {id: 312, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 313, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 314, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 315, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 316, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 317, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 318, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 319, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 320, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 321, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 322, type: "D", name: '', content: [], calories: 0,link:'',allowedDays: [0,1,2,3,4,6]},
 ]
 
 
@@ -276,13 +276,11 @@ for (let i = 1; i < allButtons.length; i++) {
 }
 
 let buttonsClass = document.getElementsByClassName('button');
-const buttArr = ['mealMB','mealML','mealMD','mealTB','mealTL','mealTD','mealWB','mealWL','mealWD','mealTHB','mealTHL','mealTHD','mealFB','mealFL','mealFD','mealSB','mealSL','mealSD','mealSUB','mealSUL','mealSUD'];
 
 for (let i = 0; i < buttonsClass.length; i++) {
     buttonsClass[i].innerHTML = 'Change';
-    buttonsClass[i].value = buttArr[i];
+    buttonsClass[i].value = idArr[i];
 }
-
 
 
 
@@ -450,28 +448,32 @@ function randomnessTry(Event) {
         newButton.innerHTML = 'Change';
         newButton.setAttribute('class','button');
         document.getElementById(elementToChange).appendChild(newButton);
+        newButton.addEventListener('click',randomnessTry)
     };
     
-
-document.body.addEventListener('click',randomnessTry)
+Array.from(document.getElementsByClassName('button')).forEach(x => x.addEventListener('click',randomnessTry));
+let modalArr = [];
 
 function showMore(Event) {
     let clickedElement = Event.target;
+    
     if (document.getElementById('moreInfo')) {
         let moreInfo = document.getElementById('moreInfo');
         moreInfo.remove();
     }
-    if (idArr.includes(clickedElement.id) || elementsArr.includes(clickedElement.id) || elementsArr.includes(clickedElement.dataset.recipeid) || idArr.includes(clickedElement.dataset.recipeid)) {
+    const myIds = mealData.map(element => element.id); //Aras 
+    if (idArr.includes(clickedElement.id) || elementsArr.includes(clickedElement.id) || myIds.includes(clickedElement.dataset.recipeid)) {
     let moreInfo = document.createElement('div');
     moreInfo.setAttribute('id','moreInfo');
-    clickedElement.appendChild(moreInfo);
     
+    clickedElement.parentElement.insertBefore(moreInfo,clickedElement.nextSibling);
+
     let showIngredients = document.createElement('p');
     let showNutrients = document.createElement('p');
     let showCalories = document.createElement('p');
     let showLink = document.createElement('a');
     let showRecipe = document.createElement('img');
-    let gotId = parseInt(clickedElement.dataset.id,10);
+    let gotId = parseInt(clickedElement.dataset.id,10); //Here is important parseInt
     const ingredients = mealData.find(element => element.id === gotId);
     if (ingredients.content == 0) {
         showIngredients.innerHTML = 'Momentálne ešte nemáme všetky údaje';
@@ -479,7 +481,7 @@ function showMore(Event) {
         showIngredients.innerHTML = ingredients.content.join(", ");
     }
     moreInfo.appendChild(showIngredients);
-    if (ingredients.nutrients !== 0) {
+    if (ingredients.nutrients) {
         showNutrients.innerHTML = ingredients.nutrients.join(', ');
         moreInfo.appendChild(showNutrients);
     } 
@@ -487,79 +489,63 @@ function showMore(Event) {
         showCalories.innerHTML = `${ingredients.calories} kcal`;
         moreInfo.appendChild(showCalories);
     }
-    if (ingredients.link !== "") {
-        showLink.innerHTML = `<img src="https://static.thenounproject.com/png/2434646-200.png" id="link-picture">`;
+    if (ingredients.link) {
+        showLink.innerHTML = `<img src="https://static.thenounproject.com/png/2434646-200.png" class="link-picture">`;
         showLink.setAttribute('href',ingredients.link);
         moreInfo.appendChild(showLink);
     }
-    if (ingredients.recipe) {
+    if (ingredients.recipe.length > 0) {
         showRecipe.setAttribute('src','https://icon-library.com/images/recipe-icon-png/recipe-icon-png-25.jpg')
-        showRecipe.setAttribute('id','link-picture');
+        showRecipe.setAttribute('class','link-picture');
         showRecipe.setAttribute('data-recipeid',ingredients.id);
         moreInfo.appendChild(showRecipe);
+        showRecipe.addEventListener('click',function() {
+            modal.style.display = 'block';
+            
+            if (document.getElementById('recipe')) {
+                document.getElementById('recipe').remove();
+            }
+            
+            let recipeContent = document.createElement('div');
+            span.parentElement.appendChild(recipeContent);
+            recipeContent.setAttribute('id','recipe');
+            
+            let recipeList = document.createElement('ol');
+            recipeList.setAttribute('class','recipelist');
+            
+            ingredients.recipe.forEach(item => {
+                let li = document.createElement('li');
+                recipeList.appendChild(li);
+                li.setAttribute('class','recipelist');
+                li.innerText = item;
+            
+            })
+            recipeContent.appendChild(recipeList);
+        })
     }
+   
+    let closeButton = document.createElement('span');
+    closeButton.innerHTML = '&times;';
+    closeButton.setAttribute('id','closebutton');
+    moreInfo.appendChild(closeButton);
+    closeButton.addEventListener('click',function() {
+        moreInfo.remove();
+    });
+
 }
 }
 
+let modal = document.getElementById('pop-up');
+let span = document.getElementsByClassName('close')[0];
 
+elementsArr.forEach(element => element.addEventListener('click',showMore));
 
-// Get the modal
-let modal = document.getElementById("pop-up");
+span.addEventListener('click',function() {
+    modal.style.display = 'none';
+})
 
-// Get the button that opens the modal
-let btn = document.getElementById("mealMB");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-document.body.onclick = function(event) {
-    let clickedID = event.target.dataset.recipeid;
-    console.log(clickedID);
-    if (idArr.includes(clickedID) || elementsArr.includes(clickedID)) {
-    
-        modal.style.display = "block";
-        let item =  mealData.find(element => element.id === clickedId);
-        
-        listElement = document.createElement('ol');
-        modal.appendChild(listElement);
-        
-        item.recipe.forEach(element => {
-            let li = document.createElement('li');
-            listElement.appendChild(li);
-            li.innerHTML += element;
-        });
-    }
-}
-
-// When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-    modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+document.body.addEventListener('click',function(event) {
     if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-document.body.addEventListener('click',showMore)
-/*
-let items = [
-        'Blue',
-        'Red',
-        'White',
-        'Green',
-        'Black',
-        'Orange'
-    ],
-    ul = document.createElement('ul');
-
-document.getElementById('myItemList').appendChild(ul);
-
-items.forEach(item => {
-    let li = document.createElement('li');
-    ul.appendChild(li);
-
-    li.innerHTML += item;
-});
-*/
+        modal.style.display = 'none';
+    }
+})
