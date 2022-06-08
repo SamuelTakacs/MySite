@@ -8,10 +8,10 @@ const mealData = [
     {id: 103, type: "B", name: 'Krupica s ovocím', content: ['mlieko','krupica','kesu','datlovy syrup'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 105, type: "B", name: 'Chlieb s avokádom', content: [], nutrients: [], recipe:[], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
-    {id: 106, type: "B", name: 'Smoothie', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 106, type: "B", name: 'Smoothie', content: ['protein 30g','banan 90g','mlieko 400ml'], calories: 280,link:'', nutrients: ['P:29g','S:22g','7g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 107, type: "B", name: 'Volské oko', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 108, type: "B", name: 'Baked oats', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 109, type: "B", name: 'Banánový chlieb', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 109, type: "B", name: 'Banánový chlieb', content: ['210g muka','75g cukor','prasok do peciva','75ml applesauce','350g bananov','60ml mlieko','skorica'], calories: 189,link:'https://simple-veganista.com/vegan-banana-tea-bread/', nutrients: ['na 100g','P:4g','S:41g','T:1g'], recipe:['banan rozmixuj s mliekom','v miske zmiesaj vsetky sypke ingrediencie','vlej banan do sypkej zmesy','do formy (ktoru vysip napr. kokosom) vlej cesto','pec na 180 stupnov cca 50minut - menej ak robis v plochej forme'], allowedDays: [0,1,2,3,4,6]},
     {id: 109, type: "B", name: 'Avokádový puding', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 110, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 111, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -23,7 +23,7 @@ const mealData = [
     {id: 117, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 118, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 201, type: "L", name: 'Špagety s omáčkou', content: ['barilla n.o 5 100g','omacka 150g','parmezam 15g'], calories: 550, nutrients: ['P:17g','T:8g','S:99g'], link: "", allowedDays: [0,1,2,3,4,6]},
-    {id: 202, type: "L", name: 'Cícerové curry', content: ['cicer','kari','kokosove-mlieko',], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 202, type: "L", name: 'Cícerové curry', content: ['cicer 70g','kari 3g','kokosove-mlieko 50ml','tofu 80g','ryza 150g','cibula 50g'], calories: 600,link:'', nutrients: ['P:16g','S:73g','T:24g'], recipe:['uvar ryzu ako prilohu','cibulu osmaz do zlata','pridaj nakrajane tofu a cicer','teraz na to daj kari, mozes pridat aj mletu papriku a garam masalu','pridaj smotanu alebo aj trochu vody','vmiesaj ryzu a mas hotovo'], allowedDays: [0,1,2,3,4,6]},
     {id: 203, type: "L", name: 'Špargľové rizotto', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 204, type: "L", name: 'Cuketové fašírky so zemiakmi', content: [],link:'', nutrients: [], recipe:[], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 205, type: "L", name: 'Tekvicová polievka', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -50,7 +50,7 @@ const mealData = [
     {id: 303, type: "D", name: 'Palacinky', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 304, type: "D", name: 'Waffle', content: ['protein 50g','muka 70g','mlieko 200ml','banan 100g','slahacka 20g','dzem/syrup 40g','prasok do peciva'], calories: 670,link:'https://www.onecleverchef.com/vegan-protein-waffles-healthy-gluten-free/', nutrients: ['P:57g','S:98g','T:5g'], recipe:['Banan z mliekom pomixuj na kasu','Zmiesaj s proteinom, mukou a praskom do peciva','Cesto musi byt tuhe','v nahriatom wafflovaci sa pecie 5 minut'], allowedDays: [0,1,2,3,4,6]},
     {id: 305, type: "D", name: 'Avokádová pomazánka', content: ['avokado 50g','kaiserka 90g','paprika 100g','tofu 80g','syr 30g'],link:'', nutrients: ['P:21','S:59','T:24'], recipe:['avokado popuc vydlickou, pridaj sol a peper (moze byt aj citron)','natri chlieb, nakrajaj oblohu a serviruj'], calories: 553, allowedDays: [0,1,2,3,4,6]},
-    {id: 306, type: "D", name: 'Kebab', content: ['tortilla','seitan','sojova omacka','obloha (cibula, salat, pradajaka)','cicer','vegan mayo'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 306, type: "D", name: 'Kebab', content: ['tortilla','seitan','sojova omacka','obloha (cibula, salat, pradajaka)','cicer','vegan mayo'], calories: 680,link:'', nutrients: ['P:30g','S:60g','T:27g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 307, type: "D", name: 'Burger', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 308, type: "D", name: 'Quesadilla', content: ['tortila 60/120g','cicer 50g','zelenina 100g','omacka 30g','syr 20g','tofu/seitan 50g'], calories: 680, nutrients: ['P:29g','T:28g','S:60g'], link: '', allowedDays: [0,1,2,3,4,5,6]},
     {id: 309, type: "D", name: 'Pizza', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -69,6 +69,10 @@ const mealData = [
     {id: 322, type: "D", name: '', content: [], calories: 0,link:'',allowedDays: [0,1,2,3,4,6]},
 ]
 
+//IDEA - NUTRIENTS - array with 3 number => 1st will be shown as protein, second as sugar and third as fat
+//IDEA2 - shopping list generated for week
+//IDEA3 - pizza calculator as pizza
+//IDEA4 - content - ingredient as pair ID and ammount
 
 /* OBSOLETE !! REPLACED BY Randomness();
 //This function will serve when you want different meal that the one you planned.
