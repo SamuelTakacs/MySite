@@ -3,18 +3,17 @@ const hour = new Date().getHours(); //get actual hour as number - e.g 8 for 8:30
 
 //Contains all meal data that will be used in meal plan
 const mealData = [ 
-    {id : 101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky','protein'], calories : 450, nutrients: ['P:37g','T:11g','S:62g'], link:'', recipe:['Daj jogurt do misky','Daj granolu do jogurtu','Pridaj čučoriedky'], allowedDays: [0,1,2,3,4,6]},
+    {id :101, type : "B", name : 'Jogurt s granolou', content : ['jogurt','granola','čučoriedky','protein'], calories : 450, nutrients: ['P:37g','T:11g','S:62g'], link:'', recipe:['Daj jogurt do misky','Daj granolu do jogurtu','Pridaj čučoriedky'], allowedDays: [0,1,2,3,4,6]},
     {id: 102, type: "B", name: 'Osie hniezdo', content: ['múka','maslo','cukor','skorica','kvasok'], calories: 550, nutrients:['P:9g','T:10g','S:92g'], link: 'https://nourishingamy.com/2020/11/17/quick-protein-cinnamon-rolls-for-2-vegan-gf-option/', allowedDays: [5]},
     {id: 103, type: "B", name: 'Krupica s ovocím', content: ['mlieko','krupica','kesu','datlovy syrup'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 105, type: "B", name: 'Chlieb s avokádom', content: [], nutrients: [], recipe:[], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
     {id: 106, type: "B", name: 'Smoothie', content: ['protein 30g','banan 90g','mlieko 400ml'], calories: 280,link:'', nutrients: ['P:29g','S:22g','7g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 107, type: "B", name: 'Volské oko', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 108, type: "B", name: 'Baked oats', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 108, type: "B", name: 'Overnight oats', content: [], calories: 0,link:'https://www.noracooks.com/vegan-overnight-oats/', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 109, type: "B", name: 'Banánový chlieb', content: ['210g muka','75g cukor','prasok do peciva','75ml applesauce','350g bananov','60ml mlieko','skorica'], calories: 189,link:'https://simple-veganista.com/vegan-banana-tea-bread/', nutrients: ['na 100g','P:4g','S:41g','T:1g'], recipe:['banan rozmixuj s mliekom','v miske zmiesaj vsetky sypke ingrediencie','vlej banan do sypkej zmesy','do formy (ktoru vysip napr. kokosom) vlej cesto','pec na 180 stupnov cca 50minut - menej ak robis v plochej forme'], allowedDays: [0,1,2,3,4,6]},
-    {id: 109, type: "B", name: 'Avokádový puding', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 110, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 111, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 110, type: "B", name: 'Avokádový puding', content: ['avokado 100g','kakao 15g','skorica','banan 110g'], calories: 321,link:'', nutrients: ['P:7g','S:35g','T:15g'], recipe:['Rozmixuj banan s avokadom','Pridaj kakao a skoricu'], allowedDays: [0,1,2,3,4,6]},
+    {id: 111, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0,link:'https://biancazapatka.com/en/vegan-baked-oats/', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 112, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 113, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 114, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -22,6 +21,7 @@ const mealData = [
     {id: 116, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 117, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 118, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 119, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 201, type: "L", name: 'Špagety s omáčkou', content: ['barilla n.o 5 100g','omacka 150g','parmezam 15g'], calories: 550, nutrients: ['P:17g','T:8g','S:99g'], link: "", allowedDays: [0,1,2,3,4,6]},
     {id: 202, type: "L", name: 'Cícerové curry', content: ['cicer 70g','kari 3g','kokosove-mlieko 50ml','tofu 80g','ryza 150g','cibula 50g'], calories: 600,link:'', nutrients: ['P:16g','S:73g','T:24g'], recipe:['uvar ryzu ako prilohu','cibulu osmaz do zlata','pridaj nakrajane tofu a cicer','teraz na to daj kari, mozes pridat aj mletu papriku a garam masalu','pridaj smotanu alebo aj trochu vody','vmiesaj ryzu a mas hotovo'], allowedDays: [0,1,2,3,4,6]},
     {id: 203, type: "L", name: 'Špargľové rizotto', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -553,3 +553,23 @@ document.body.addEventListener('click',function(event) {
         modal.style.display = 'none';
     }
 })
+
+function generateShoppingList(arr1,arr2,arr3) {
+    let shoppinglist = [];
+    arr1.forEach(element => {
+        let mealValue = mealData.find(meal => meal.id === element)
+        mealValue.content.forEach(ingredient => shoppinglist.push(ingredient));
+    })
+    arr2.forEach(element => {
+        let mealValue = mealData.find(meal => meal.id === element)
+        mealValue.content.forEach(ingredient => shoppinglist.push(ingredient));
+    })
+    arr3.forEach(element => {
+        let mealValue = mealData.find(meal => meal.id === element)
+        mealValue.content.forEach(ingredient => shoppinglist.push(ingredient));
+    })
+    shoppinglist.sort();
+    console.log(shoppinglist);
+}
+
+//generateShoppingList(b,l,d);
