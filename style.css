@@ -141,3 +141,12 @@ h1 {
   .recipelist {
       margin-bottom: 0.4rem;
   }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  .visible {
+    opacity: 1;
+    transition:  opacity 1s ease-out;
+  }
