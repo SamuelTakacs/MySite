@@ -31,7 +31,7 @@ const mealData = [
     {id: 207, type: "L", name: 'Tofu s hubami a ryžou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 208, type: "L", name: 'Buddha bowl', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 209, type: "L", name: 'Šošovicový prívarok', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 210, type: "L", name: 'Chilly sin carne', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 210, type: "L", name: 'Chilly sin carne', content: ['Fazula 150g','Pradajkovy pretlak 100g','Tofu 160g','Chilly 120g','Paprika 2ks','Paradajka 1ks','Cibula 1ks'], calories: 0,link:'https://www.dcerka.sk/vegan-chilli-sin-carne/', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 211, type: "L", name: 'Tofu so zeleninou a ryžou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 212, type: "L", name: 'Brokolicová polievka', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 213, type: "L", name: 'Zeleninové styr-fry', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -205,9 +205,9 @@ second B - breakfast, L - launch, S - snack, D - dinner
 e.g = mealSUD - sunday dinner
 */
 
-const b = [101,104,106,109,103,102,107]
-const l = [201,202,208,211,212,204,206]
-const d = [311,308,304,305,306,309,302]
+const b = [101,104,101,106,103,102,107]
+const l = [201,202,208,210,212,204,206]
+const d = [311,308,304,306,311,309,302]
 
 function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R ranajky, O - obed
     //step one - determine mealType
