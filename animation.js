@@ -1,23 +1,25 @@
 window.addEventListener('DOMContentLoaded',function() {
-    document.body.setAttribute('class','visible');
-    document.getElementById('monday').setAttribute('class','day-div-v')
+    setTimeout(function(){
+        document.body.setAttribute('class','visible');
+        document.getElementById('monday').setAttribute('class','day-div-v')
+    },100);
     setTimeout(function(){
         document.getElementById('tuesday').setAttribute('class','day-div-v')
     },500)
     setTimeout(function(){
         document.getElementById('wednesday').setAttribute('class','day-div-v')
-    },1000)
+    },800)
     setTimeout(function(){
         document.getElementById('thursday').setAttribute('class','day-div-v')
-    },1500)
+    },1100)
     setTimeout(function(){
         document.getElementById('friday').setAttribute('class','day-div-v')
-    },2000)
+    },1400)
     setTimeout(function(){
         document.getElementById('saturday').setAttribute('class','day-div-v')
-    },2500)
+    },1700)
     setTimeout(function(){
         document.getElementById('sunday').setAttribute('class','day-div-v')
-    },3000)
+    },2000)
 })
 
