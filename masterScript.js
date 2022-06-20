@@ -9,12 +9,12 @@ const mealData = [
     {id: 104, type: "B", name: 'Ovsená kaša', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 105, type: "B", name: 'Chlieb s avokádom', content: [], nutrients: [], recipe:[], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
     {id: 106, type: "B", name: 'Smoothie', content: ['protein 30g','banan 90g','mlieko 400ml'], calories: 280,link:'', nutrients: ['P:29g','S:22g','7g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 107, type: "B", name: 'Volské oko', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 107, type: "B", name: 'Volské oko', content: ['vajcia','chlieb/zemla'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 108, type: "B", name: 'Overnight oats', content: [], calories: 0,link:'https://www.noracooks.com/vegan-overnight-oats/', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 109, type: "B", name: 'Banánový chlieb', content: ['210g muka','75g cukor','prasok do peciva','75ml applesauce','350g bananov','60ml mlieko','skorica'], calories: 189,link:'https://simple-veganista.com/vegan-banana-tea-bread/', nutrients: ['na 100g','P:4g','S:41g','T:1g'], recipe:['banan rozmixuj s mliekom','v miske zmiesaj vsetky sypke ingrediencie','vlej banan do sypkej zmesy','do formy (ktoru vysip napr. kokosom) vlej cesto','pec na 180 stupnov cca 50minut - menej ak robis v plochej forme'], allowedDays: [0,1,2,3,4,6]},
     {id: 110, type: "B", name: 'Avokádový puding', content: ['avokado 100g','kakao 15g','skorica','banan 110g'], calories: 321,link:'', nutrients: ['P:7g','S:35g','T:15g'], recipe:['Rozmixuj banan s avokadom','Pridaj kakao a skoricu'], allowedDays: [0,1,2,3,4,6]},
     {id: 111, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0,link:'https://biancazapatka.com/en/vegan-baked-oats/', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 112, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 112, type: "B", name: 'Hrianka s cesnakom a avokádom', content: ['avokado','toastovy chlieb','cesnak','maslo','parmezam'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 113, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 114, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 115, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -28,15 +28,15 @@ const mealData = [
     {id: 204, type: "L", name: 'Cuketové fašírky so zemiakmi', content: [],link:'', nutrients: [], recipe:[], calories: 0, allowedDays: [0,1,2,3,4,6]},
     {id: 205, type: "L", name: 'Tekvicová polievka', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 206, type: "L", name: 'Špagety s pečených paprík', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 207, type: "L", name: 'Tofu s hubami a ryžou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 208, type: "L", name: 'Buddha bowl', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 207, type: "L", name: 'Tofu s hubami a ryžou', content: ['sampiony','tofu','cibula','ryza','smotana'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 208, type: "L", name: 'Buddha bowl', content: ['brokolica','sosovica','cvikla','tofu','cibula','ryza'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 209, type: "L", name: 'Šošovicový prívarok', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 210, type: "L", name: 'Chilly sin carne', content: ['Fazula 150g','Pradajkovy pretlak 100g','Tofu 160g','Chilly 120g','Paprika 2ks','Paradajka 1ks','Cibula 1ks'], calories: 0,link:'https://www.dcerka.sk/vegan-chilli-sin-carne/', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 211, type: "L", name: 'Tofu so zeleninou a ryžou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 212, type: "L", name: 'Brokolicová polievka', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 213, type: "L", name: 'Zeleninové styr-fry', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 214, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 215, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 213, type: "L", name: 'Zeleninové styr-fry', content: ['mrazena zelenina','tofu','cibula','kuskus','mrkva'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 214, type: "L", name: 'Zeleninovy vyvar', content: ['mrkva','bujon','zeler','petrzlen','rezance'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 215, type: "L", name: 'Tekvicove rizotto', content: ['tekvica','ryza arborio','smotana','cesnak'], calories: 0,link:'https://zardyplants.com/recipes/quick-meals/vegan-pumpkin-risotto/#Skip', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 216, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 217, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 218, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -46,14 +46,14 @@ const mealData = [
     {id: 222, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 223, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 301, type: "D", name: 'Toast so syrom', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 302, type: "D", name: 'Žemľa s nátierkou', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 302, type: "D", name: 'Žemľa s nátierkou', content: ['kaiserka','natierka','tofu','paradjka','paprika','syr'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 303, type: "D", name: 'Palacinky', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 304, type: "D", name: 'Waffle', content: ['protein 50g','muka 70g','mlieko 200ml','banan 100g','slahacka 20g','dzem/syrup 40g','prasok do peciva'], calories: 670,link:'https://www.onecleverchef.com/vegan-protein-waffles-healthy-gluten-free/', nutrients: ['P:57g','S:98g','T:5g'], recipe:['Banan z mliekom pomixuj na kasu','Zmiesaj s proteinom, mukou a praskom do peciva','Cesto musi byt tuhe','v nahriatom wafflovaci sa pecie 5 minut'], allowedDays: [0,1,2,3,4,6]},
     {id: 305, type: "D", name: 'Avokádová pomazánka', content: ['avokado 50g','kaiserka 90g','paprika 100g','tofu 80g','syr 30g'],link:'', nutrients: ['P:21','S:59','T:24'], recipe:['avokado popuc vydlickou, pridaj sol a peper (moze byt aj citron)','natri chlieb, nakrajaj oblohu a serviruj'], calories: 553, allowedDays: [0,1,2,3,4,6]},
     {id: 306, type: "D", name: 'Kebab', content: ['tortilla','seitan','sojova omacka','obloha (cibula, salat, pradajaka)','cicer','vegan mayo'], calories: 680,link:'', nutrients: ['P:30g','S:60g','T:27g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 307, type: "D", name: 'Burger', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 308, type: "D", name: 'Quesadilla', content: ['tortila 60/120g','cicer 50g','zelenina 100g','omacka 30g','syr 20g','tofu/seitan 50g'], calories: 680, nutrients: ['P:29g','T:28g','S:60g'], link: '', allowedDays: [0,1,2,3,4,5,6]},
-    {id: 309, type: "D", name: 'Pizza', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 309, type: "D", name: 'Pizza', content: ['muka','voda','drozdie'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 310, type: "D", name: 'Chlieb s hummusom', content: ['kaiserka 90g','hummus trio 60g','tofu 80g','paprika 100g','kysla uhorka 1ks'], calories: 620,link:'', nutrients: ['P:30g','S:60g','T:30g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 311, type: "D", name: 'Chlieb s avokádom', content: ['kaiserka 80g','avokado 40g','parmezam 10g','tofu 40g','paprika 100g'], calories: 620, nutrients: ['P:35g','T:17g','S:88g'], link: '', recipe:[], allowedDays: [0,1,2,3,4,5,6]},
     {id: 312, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
@@ -205,9 +205,9 @@ second B - breakfast, L - launch, S - snack, D - dinner
 e.g = mealSUD - sunday dinner
 */
 
-const b = [101,104,101,106,103,102,107]
-const l = [201,202,208,210,212,204,206]
-const d = [311,308,304,306,311,309,302]
+const b = [106,103,101,112,107,102,109]
+const l = [201,202,208,207,214,215,213]
+const d = [308,302,303,306,309,305,310]
 
 function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R ranajky, O - obed
     //step one - determine mealType
