@@ -1,3 +1,4 @@
+
 const date = new Date().getDay(); //get actual day as number - e.g 26 for 26th 
 const hour = new Date().getHours(); //get actual hour as number - e.g 8 for 8:30
 
@@ -14,8 +15,8 @@ const mealData = [
     {id: 109, type: "B", name: 'Banánový chlieb', content: ['210g muka','75g cukor','prasok do peciva','75ml applesauce','350g bananov','60ml mlieko','skorica'], calories: 189,link:'https://simple-veganista.com/vegan-banana-tea-bread/', nutrients: ['na 100g','P:4g','S:41g','T:1g'], recipe:['banan rozmixuj s mliekom','v miske zmiesaj vsetky sypke ingrediencie','vlej banan do sypkej zmesy','do formy (ktoru vysip napr. kokosom) vlej cesto','pec na 180 stupnov cca 50minut - menej ak robis v plochej forme'], allowedDays: [0,1,2,3,4,6]},
     {id: 110, type: "B", name: 'Avokádový puding', content: ['avokado 100g','kakao 15g','skorica','banan 110g'], calories: 321,link:'', nutrients: ['P:7g','S:35g','T:15g'], recipe:['Rozmixuj banan s avokadom','Pridaj kakao a skoricu'], allowedDays: [0,1,2,3,4,6]},
     {id: 111, type: "B", name: 'Zapečené ovsené vločky', content: [], calories: 0,link:'https://biancazapatka.com/en/vegan-baked-oats/', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 112, type: "B", name: 'Hrianka s cesnakom a avokádom', content: ['avokado','toastovy chlieb','cesnak','maslo','parmezam'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 113, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 112, type: "B", name: 'Hrianka s cesnakom a avokádom', content: ['avokado','toastovy chlieb','cesnak','maslo'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 113, type: "B", name: 'Chia pudding', content: ['smoothie','chia','banan','cucoriedky','kesu orechy'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 114, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 115, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 116, type: "B", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -37,8 +38,8 @@ const mealData = [
     {id: 213, type: "L", name: 'Zeleninové styr-fry', content: ['mrazena zelenina','tofu','cibula','kuskus','mrkva'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 214, type: "L", name: 'Zeleninovy vyvar', content: ['mrkva','bujon','zeler','petrzlen','rezance'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 215, type: "L", name: 'Tekvicove rizotto', content: ['tekvica','ryza arborio','smotana','cesnak'], calories: 0,link:'https://zardyplants.com/recipes/quick-meals/vegan-pumpkin-risotto/#Skip', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 216, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
-    {id: 217, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 216, type: "L", name: 'Cuketove rizotto', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 217, type: "L", name: 'Neviem', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 218, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 219, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 220, type: "L", name: '', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
@@ -50,15 +51,15 @@ const mealData = [
     {id: 303, type: "D", name: 'Palacinky', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 304, type: "D", name: 'Waffle', content: ['protein 50g','muka 70g','mlieko 200ml','banan 100g','slahacka 20g','dzem/syrup 40g','prasok do peciva'], calories: 670,link:'https://www.onecleverchef.com/vegan-protein-waffles-healthy-gluten-free/', nutrients: ['P:57g','S:98g','T:5g'], recipe:['Banan z mliekom pomixuj na kasu','Zmiesaj s proteinom, mukou a praskom do peciva','Cesto musi byt tuhe','v nahriatom wafflovaci sa pecie 5 minut'], allowedDays: [0,1,2,3,4,6]},
     {id: 305, type: "D", name: 'Avokádová pomazánka', content: ['avokado 50g','kaiserka 90g','paprika 100g','tofu 80g','syr 30g'],link:'', nutrients: ['P:21','S:59','T:24'], recipe:['avokado popuc vydlickou, pridaj sol a peper (moze byt aj citron)','natri chlieb, nakrajaj oblohu a serviruj'], calories: 553, allowedDays: [0,1,2,3,4,6]},
-    {id: 306, type: "D", name: 'Kebab', content: ['tortilla','seitan','sojova omacka','obloha (cibula, salat, pradajaka)','cicer','vegan mayo'], calories: 680,link:'', nutrients: ['P:30g','S:60g','T:27g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
+    {id: 306, type: "D", name: 'Burrito', content: ['tortilla','seitan alebo tofu','obloha (cibula, salat, pradajaka)','cicer','vegan mayo'], calories: 680,link:'', nutrients: ['P:30g','S:60g','T:27g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 307, type: "D", name: 'Burger', content: [], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 308, type: "D", name: 'Quesadilla', content: ['tortila 60/120g','cicer 50g','zelenina 100g','omacka 30g','syr 20g','tofu/seitan 50g'], calories: 680, nutrients: ['P:29g','T:28g','S:60g'], link: '', allowedDays: [0,1,2,3,4,5,6]},
     {id: 309, type: "D", name: 'Pizza', content: ['muka','voda','drozdie'], calories: 0,link:'', nutrients: [], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 310, type: "D", name: 'Chlieb s hummusom', content: ['kaiserka 90g','hummus trio 60g','tofu 80g','paprika 100g','kysla uhorka 1ks'], calories: 620,link:'', nutrients: ['P:30g','S:60g','T:30g'], recipe:[], allowedDays: [0,1,2,3,4,6]},
     {id: 311, type: "D", name: 'Chlieb s avokádom', content: ['kaiserka 80g','avokado 40g','parmezam 10g','tofu 40g','paprika 100g'], calories: 620, nutrients: ['P:35g','T:17g','S:88g'], link: '', recipe:[], allowedDays: [0,1,2,3,4,5,6]},
-    {id: 312, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
-    {id: 313, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
-    {id: 314, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 312, type: "D", name: 'Hrianka s cesnakom a avokádom', content: ['avokado','toastovy chlieb','cesnak','maslo'], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 313, type: "D", name: 'Cestoviny s omáčkou', content: ['cestoviny','omacka'], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
+    {id: 314, type: "D", name: 'Bez vecere', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
     {id: 315, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
     {id: 316, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
     {id: 317, type: "D", name: '', content: [], calories: 0,link:'', allowedDays: [0,1,2,3,4,6]},
@@ -205,9 +206,9 @@ second B - breakfast, L - launch, S - snack, D - dinner
 e.g = mealSUD - sunday dinner
 */
 
-const b = [106,103,101,112,107,102,109]
-const l = [201,202,208,207,214,215,213]
-const d = [308,302,303,306,309,305,310]
+const b = [107,101,101,113,110,113,110]
+const l = [201,217,217,202,216,306,306]
+const d = [312,312,312,310,308,313,314]
 
 function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R ranajky, O - obed
     //step one - determine mealType
@@ -479,7 +480,7 @@ function showMore(Event) {
     let showRecipe = document.createElement('img');
     let gotId = parseInt(clickedElement.dataset.id,10); //Here is important parseInt
     const ingredients = mealData.find(element => element.id === gotId);
-    if (ingredients.content == 0) {
+    if (ingredients.content === "") {
         showIngredients.innerHTML = 'Momentálne ešte nemáme všetky údaje';
     } else {
         showIngredients.innerHTML = ingredients.content.join(", ");
@@ -501,7 +502,7 @@ function showMore(Event) {
     if (ingredients.recipe.length > 0) {
         showRecipe.setAttribute('src','https://icon-library.com/images/recipe-icon-png/recipe-icon-png-25.jpg')
         showRecipe.setAttribute('class','link-picture');
-        showRecipe.setAttribute('data-recipeid',ingredients.id);
+        showRecipe.setAttribute('data-recipeid',ingredients.id.toString);
         moreInfo.appendChild(showRecipe);
         showRecipe.addEventListener('click',function() {
             modal.style.display = 'block';
