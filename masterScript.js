@@ -206,9 +206,9 @@ second B - breakfast, L - launch, S - snack, D - dinner
 e.g = mealSUD - sunday dinner
 */
 
-const b = [107,101,101,113,110,113,110]
-const l = [201,217,217,202,216,306,306]
-const d = [312,312,312,310,308,313,314]
+const b = [103,101,113,106,101,112,104]
+const l = [201,202,209,211,208,206,207]
+const d = [306,302,303,311,312,309,301]
 
 function generateMealPlan(array,meal) { //parameter meal predstavuje jedlo - R ranajky, O - obed
     //step one - determine mealType
